@@ -52,7 +52,7 @@ loadScripts(document, 'script');</script>
 <a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">所有程序包</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#addBoneExtraData(java.lang.String,ltd.icecold.orangeengine.api.model.ExtraBoneData)" class="member-name-link">addBoneExtraData(String, ExtraBoneData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#addBoneExtraData(java.lang.String,ltd.icecold.orangeengine.api.model.data.bone.ExtraBoneData)" class="member-name-link">addBoneExtraData(String, ExtraBoneData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
 <dd>
 <div class="block">动态修改骨骼数据
  修改mm生物可能会导致mm标签配置的相同骨骼数据失效，可先获取是否已存在附加数据来兼容</div>
@@ -63,17 +63,15 @@ loadScripts(document, 'script');</script>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelManager.html#addNewModelEntity(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.ModelData)" class="member-name-link">addNewModelEntity(Entity, ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelManager.html" title="ltd.icecold.orangeengine.api.model中的类">ModelManager</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/ModelManager.html#addNewModelEntity(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">addNewModelEntity(Entity, ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelManager.html" title="ltd.icecold.orangeengine.api.model中的类">ModelManager</a></dt>
 <dd>
 <div class="block">不推荐使用本方法，推荐使用<a href="ltd/icecold/orangeengine/api/model/ModelManager.html#addNewModelEntity(org.bukkit.entity.Entity,java.lang.String)"><code>ModelManager.addNewModelEntity(Entity, String)</code></a></br>
  为某个实体绑定模型 并返回ModelEntity</br>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.html#animation" class="member-name-link">animation</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData</a></dt>
-<dd>
-<div class="block">模型默认动作</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html#animation" class="member-name-link">animation</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
@@ -85,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">客户端实体已绑定模型</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/event/ClientBindEntityModelEvent.html#%3Cinit%3E(org.bukkit.entity.Player,java.util.UUID,ltd.icecold.orangeengine.api.model.ModelData,ltd.icecold.orangeengine.api.event.ClientBindEntityModelEvent.EntityStatus)" class="member-name-link">ClientBindEntityModelEvent(Player, UUID, ModelData, ClientBindEntityModelEvent.EntityStatus)</a> - 类的构造器 ltd.icecold.orangeengine.api.event.<a href="ltd/icecold/orangeengine/api/event/ClientBindEntityModelEvent.html" title="ltd.icecold.orangeengine.api.event中的类">ClientBindEntityModelEvent</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/event/ClientBindEntityModelEvent.html#%3Cinit%3E(org.bukkit.entity.Player,java.util.UUID,ltd.icecold.orangeengine.api.model.data.model.ModelData,ltd.icecold.orangeengine.api.event.ClientBindEntityModelEvent.EntityStatus)" class="member-name-link">ClientBindEntityModelEvent(Player, UUID, ModelData, ClientBindEntityModelEvent.EntityStatus)</a> - 类的构造器 ltd.icecold.orangeengine.api.event.<a href="ltd/icecold/orangeengine/api/event/ClientBindEntityModelEvent.html" title="ltd.icecold.orangeengine.api.event中的类">ClientBindEntityModelEvent</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ltd/icecold/orangeengine/api/event/ClientBindEntityModelEvent.EntityStatus.html" class="type-name-link" title="enum class in ltd.icecold.orangeengine.api.event">ClientBindEntityModelEvent.EntityStatus</a> - <a href="ltd/icecold/orangeengine/api/event/package-summary.html">ltd.icecold.orangeengine.api.event</a>中的Enum Class</dt>
 <dd>&nbsp;</dd>
@@ -116,18 +114,14 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:D">D</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html#death" class="member-name-link">death</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">DefaultAnimation(String, String, String, String)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html#death" class="member-name-link">death</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a> - <a href="ltd/icecold/orangeengine/api/model/data/bone/package-summary.html">ltd.icecold.orangeengine.api.model.data.bone</a>中的类</dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html#%3Cinit%3E()" class="member-name-link">ExtraBoneData()</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData.Quaternion</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#%3Cinit%3E()" class="member-name-link">ExtraBoneData()</a> - 类的构造器 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
@@ -223,21 +217,19 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html#height" class="member-name-link">height</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.ModelHitBox</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html#height" class="member-name-link">height</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelHitBox</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.html#hitbox" class="member-name-link">hitbox</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData</a></dt>
-<dd>
-<div class="block">碰撞箱</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html#hitbox" class="member-name-link">hitbox</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:I">I</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html#idle" class="member-name-link">idle</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html#idle" class="member-name-link">idle</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:J">J</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html#jump" class="member-name-link">jump</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html#jump" class="member-name-link">jump</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
@@ -252,31 +244,35 @@ loadScripts(document, 'script');</script>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
 </dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/package-summary.html">ltd.icecold.orangeengine.api.model.data.bone</a> - 程序包 ltd.icecold.orangeengine.api.model.data.bone</dt>
+<dd>&nbsp;</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/package-summary.html">ltd.icecold.orangeengine.api.model.data.model</a> - 程序包 ltd.icecold.orangeengine.api.model.data.model</dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:M">M</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ModelData</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a> - <a href="ltd/icecold/orangeengine/api/model/data/model/package-summary.html">ltd.icecold.orangeengine.api.model.data.model</a>中的类</dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.html#%3Cinit%3E(java.lang.String,ltd.icecold.orangeengine.api.model.ModelData.ModelHitBox,ltd.icecold.orangeengine.api.model.ModelData.DefaultAnimation)" class="member-name-link">ModelData(String, ModelData.ModelHitBox, ModelData.DefaultAnimation)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html#%3Cinit%3E(java.lang.String,ltd.icecold.orangeengine.api.model.data.model.ModelHitBox,ltd.icecold.orangeengine.api.model.data.model.ModelDefaultAnimation)" class="member-name-link">ModelData(String, ModelHitBox, ModelDefaultAnimation)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a> - <a href="ltd/icecold/orangeengine/api/model/data/model/package-summary.html">ltd.icecold.orangeengine.api.model.data.model</a>中的类</dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ModelData.ModelHitBox</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">ModelDefaultAnimation(String, String, String, String)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#%3Cinit%3E(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.ModelData)" class="member-name-link">ModelEntity(Entity, ModelData)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#%3Cinit%3E(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">ModelEntity(Entity, ModelData)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html#%3Cinit%3E(double,double)" class="member-name-link">ModelHitBox(double, double)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.ModelHitBox</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelHitBox</a> - <a href="ltd/icecold/orangeengine/api/model/data/model/package-summary.html">ltd.icecold.orangeengine.api.model.data.model</a>中的类</dt>
+<dd>&nbsp;</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html#%3Cinit%3E(double,double)" class="member-name-link">ModelHitBox(double, double)</a> - 类的构造器 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelHitBox</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ltd/icecold/orangeengine/api/model/ModelManager.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model中的类">ModelManager</a> - <a href="ltd/icecold/orangeengine/api/model/package-summary.html">ltd.icecold.orangeengine.api.model</a>中的类</dt>
 <dd>&nbsp;</dd>
 <dt><a href="ltd/icecold/orangeengine/api/model/ModelManager.html#%3Cinit%3E()" class="member-name-link">ModelManager()</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelManager.html" title="ltd.icecold.orangeengine.api.model中的类">ModelManager</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.html#modelName" class="member-name-link">modelName</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData</a></dt>
-<dd>
-<div class="block">模型名</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html#modelName" class="member-name-link">modelName</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
@@ -299,7 +295,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:Q">Q</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html#%3Cinit%3E()" class="member-name-link">Quaternion()</a> - 类的构造器 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData.Quaternion</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" class="type-name-link" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a> - <a href="ltd/icecold/orangeengine/api/model/data/bone/package-summary.html">ltd.icecold.orangeengine.api.model.data.bone</a>中的类</dt>
+<dd>&nbsp;</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html#%3Cinit%3E()" class="member-name-link">Quaternion()</a> - 类的构造器 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:R">R</h2>
@@ -312,17 +310,13 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">移除实体绑定的模型</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html#rotate" class="member-name-link">rotate</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a></dt>
-<dd>
-<div class="block">旋转</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#rotate" class="member-name-link">rotate</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html#scale" class="member-name-link">scale</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a></dt>
-<dd>
-<div class="block">缩放</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#scale" class="member-name-link">scale</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#setModel()" class="member-name-link">setModel()</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
 <dd>
 <div class="block">让所有玩家客户端渲染绑定已设置的实体模型</div>
@@ -331,7 +325,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">让所有玩家客户端渲设置的实体模型</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#setModel(ltd.icecold.orangeengine.api.model.ModelData)" class="member-name-link">setModel(ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#setModel(ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">setModel(ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
 <dd>
 <div class="block">让所有玩家客户端渲染设置的实体模型</div>
 </dd>
@@ -343,7 +337,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#setModel(org.bukkit.entity.Player,ltd.icecold.orangeengine.api.model.ModelData)" class="member-name-link">setModel(Player, ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/ModelEntity.html#setModel(org.bukkit.entity.Player,ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">setModel(Player, ModelData)</a> - 类中的方法 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></dt>
 <dd>
 <div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
 </dd>
@@ -352,10 +346,12 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html#translate" class="member-name-link">translate</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a></dt>
-<dd>
-<div class="block">偏移</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#toString()" class="member-name-link">toString()</a> - 类中的方法 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html#toString()" class="member-name-link">toString()</a> - 类中的方法 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#translate" class="member-name-link">translate</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:V">V</h2>
 <dl class="index">
@@ -368,31 +364,29 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html#visible" class="member-name-link">visible</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData</a></dt>
-<dd>
-<div class="block">是否可见</div>
-</dd>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html#visible" class="member-name-link">visible</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">ExtraBoneData</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:W">W</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html#walk" class="member-name-link">walk</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.DefaultAnimation.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.DefaultAnimation</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html#walk" class="member-name-link">walk</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelDefaultAnimation.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelDefaultAnimation</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html#width" class="member-name-link">width</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ModelData.ModelHitBox.html" title="ltd.icecold.orangeengine.api.model中的类">ModelData.ModelHitBox</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html#width" class="member-name-link">width</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.model.<a href="ltd/icecold/orangeengine/api/model/data/model/ModelHitBox.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelHitBox</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:X">X</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html#x" class="member-name-link">x</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData.Quaternion</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html#x" class="member-name-link">x</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:Y">Y</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html#y" class="member-name-link">y</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData.Quaternion</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html#y" class="member-name-link">y</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:Z">Z</h2>
 <dl class="index">
-<dt><a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html#z" class="member-name-link">z</a> - 类中的变量 ltd.icecold.orangeengine.api.model.<a href="ltd/icecold/orangeengine/api/model/ExtraBoneData.Quaternion.html" title="ltd.icecold.orangeengine.api.model中的类">ExtraBoneData.Quaternion</a></dt>
+<dt><a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html#z" class="member-name-link">z</a> - 类中的变量 ltd.icecold.orangeengine.api.model.data.bone.<a href="ltd/icecold/orangeengine/api/model/data/bone/Quaternion.html" title="ltd.icecold.orangeengine.api.model.data.bone中的类">Quaternion</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">所有程序包</a></main>
