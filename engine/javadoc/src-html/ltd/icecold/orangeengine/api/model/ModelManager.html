@@ -73,7 +73,7 @@
 <span class="source-line-no">060</span><span id="line-60">    }</span>
 <span class="source-line-no">061</span><span id="line-61"></span>
 <span class="source-line-no">062</span><span id="line-62">    /**</span>
-<span class="source-line-no">063</span><span id="line-63">     * 不推荐使用本方法，推荐使用{@link ModelManager#addNewModelEntity(Entity, String)}&lt;/br&gt;</span>
+<span class="source-line-no">063</span><span id="line-63">     * 不推荐使用本方法，推荐使用{@link ModelManager#addNewModelEntity(UUID, String)}&lt;/br&gt;</span>
 <span class="source-line-no">064</span><span id="line-64">     * 为某个实体绑定模型 并返回ModelEntity&lt;/br&gt;</span>
 <span class="source-line-no">065</span><span id="line-65">     * 目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE&lt;/br&gt;</span>
 <span class="source-line-no">066</span><span id="line-66">     * SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</span>
@@ -81,9 +81,9 @@
 <span class="source-line-no">068</span><span id="line-68">     * @param model 模型数据（如果客户端资源包没有注册该模型则不会渲染）</span>
 <span class="source-line-no">069</span><span id="line-69">     * @return ModelEntity</span>
 <span class="source-line-no">070</span><span id="line-70">     */</span>
-<span class="source-line-no">071</span><span id="line-71">    public ModelEntity addNewModelEntity(Entity entity, ModelData model){</span>
+<span class="source-line-no">071</span><span id="line-71">    public ModelEntity addNewModelEntity(UUID entity, ModelData model){</span>
 <span class="source-line-no">072</span><span id="line-72">        ModelEntity modelEntity = new ModelEntity(entity, model).setModel();</span>
-<span class="source-line-no">073</span><span id="line-73">        modelEntityMap.put(entity.getUniqueId(),modelEntity);</span>
+<span class="source-line-no">073</span><span id="line-73">        modelEntityMap.put(entity,modelEntity);</span>
 <span class="source-line-no">074</span><span id="line-74">        return modelEntity;</span>
 <span class="source-line-no">075</span><span id="line-75">    }</span>
 <span class="source-line-no">076</span><span id="line-76"></span>
@@ -95,7 +95,7 @@
 <span class="source-line-no">082</span><span id="line-82">     * @param model 模型数据（如果客户端资源包没有注册该模型则不会渲染）</span>
 <span class="source-line-no">083</span><span id="line-83">     * @return ModelEntity</span>
 <span class="source-line-no">084</span><span id="line-84">     */</span>
-<span class="source-line-no">085</span><span id="line-85">    public ModelEntity addNewModelEntity(Entity entity,String model){</span>
+<span class="source-line-no">085</span><span id="line-85">    public ModelEntity addNewModelEntity(UUID entity,String model){</span>
 <span class="source-line-no">086</span><span id="line-86">        return null;</span>
 <span class="source-line-no">087</span><span id="line-87">    }</span>
 <span class="source-line-no">088</span><span id="line-88"></span>

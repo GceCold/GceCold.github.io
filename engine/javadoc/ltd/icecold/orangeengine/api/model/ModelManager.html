@@ -105,7 +105,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">方法</div>
 <div class="table-header col-last">说明</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNewModelEntity(org.bukkit.entity.Entity,java.lang.String)" class="member-name-link">addNewModelEntity</a><wbr>(org.bukkit.entity.Entity&nbsp;entity,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNewModelEntity(java.util.UUID,java.lang.String)" class="member-name-link">addNewModelEntity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">为某个实体绑定模型 并返回ModelEntity</br>
@@ -113,10 +113,10 @@ loadScripts(document, 'script');</script>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNewModelEntity(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">addNewModelEntity</a><wbr>(org.bukkit.entity.Entity&nbsp;entity,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addNewModelEntity(java.util.UUID,ltd.icecold.orangeengine.api.model.data.model.ModelData)" class="member-name-link">addNewModelEntity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a>&nbsp;model)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">不推荐使用本方法，推荐使用<a href="#addNewModelEntity(org.bukkit.entity.Entity,java.lang.String)"><code>addNewModelEntity(Entity, String)</code></a></br>
+<div class="block">不推荐使用本方法，推荐使用<a href="#addNewModelEntity(java.util.UUID,java.lang.String)"><code>addNewModelEntity(UUID, String)</code></a></br>
  为某个实体绑定模型 并返回ModelEntity</br>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
@@ -245,11 +245,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="addNewModelEntity(org.bukkit.entity.Entity,ltd.icecold.orangeengine.api.model.data.model.ModelData)">
+<section class="detail" id="addNewModelEntity(java.util.UUID,ltd.icecold.orangeengine.api.model.data.model.ModelData)">
 <h3>addNewModelEntity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-71">addNewModelEntity</a></span><wbr><span class="parameters">(org.bukkit.entity.Entity&nbsp;entity,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-71">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a>&nbsp;model)</span></div>
-<div class="block">不推荐使用本方法，推荐使用<a href="#addNewModelEntity(org.bukkit.entity.Entity,java.lang.String)"><code>addNewModelEntity(Entity, String)</code></a></br>
+<div class="block">不推荐使用本方法，推荐使用<a href="#addNewModelEntity(java.util.UUID,java.lang.String)"><code>addNewModelEntity(UUID, String)</code></a></br>
  为某个实体绑定模型 并返回ModelEntity</br>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>
  SKELETON HUSK BEE WOLF DOLPHIN PIG模型渲染进行了替换，其他实体类型无法替换</div>
@@ -263,9 +263,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="addNewModelEntity(org.bukkit.entity.Entity,java.lang.String)">
+<section class="detail" id="addNewModelEntity(java.util.UUID,java.lang.String)">
 <h3>addNewModelEntity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-85">addNewModelEntity</a></span><wbr><span class="parameters">(org.bukkit.entity.Entity&nbsp;entity,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的类">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-85">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">为某个实体绑定模型 并返回ModelEntity</br>
  目前OrangeEngine仅对 PLAYER ARMOR_STAND VILLAGER ZOMBIE</br>

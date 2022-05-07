@@ -16,17 +16,17 @@
 <span class="source-line-no">003</span><span id="line-3">import com.google.common.collect.Maps;</span>
 <span class="source-line-no">004</span><span id="line-4">import ltd.icecold.orangeengine.api.model.data.bone.ExtraBoneData;</span>
 <span class="source-line-no">005</span><span id="line-5">import ltd.icecold.orangeengine.api.model.data.model.ModelData;</span>
-<span class="source-line-no">006</span><span id="line-6">import org.bukkit.entity.Entity;</span>
-<span class="source-line-no">007</span><span id="line-7">import org.bukkit.entity.Player;</span>
-<span class="source-line-no">008</span><span id="line-8"></span>
-<span class="source-line-no">009</span><span id="line-9">import java.util.Map;</span>
+<span class="source-line-no">006</span><span id="line-6">import org.bukkit.entity.Player;</span>
+<span class="source-line-no">007</span><span id="line-7"></span>
+<span class="source-line-no">008</span><span id="line-8">import java.util.Map;</span>
+<span class="source-line-no">009</span><span id="line-9">import java.util.UUID;</span>
 <span class="source-line-no">010</span><span id="line-10"></span>
 <span class="source-line-no">011</span><span id="line-11">public class ModelEntity {</span>
-<span class="source-line-no">012</span><span id="line-12">    private Entity entity;</span>
+<span class="source-line-no">012</span><span id="line-12">    private UUID entity;</span>
 <span class="source-line-no">013</span><span id="line-13">    private ModelData modelData;</span>
 <span class="source-line-no">014</span><span id="line-14">    private Map&lt;String, ExtraBoneData&gt; extraBoneDataMap;</span>
 <span class="source-line-no">015</span><span id="line-15"></span>
-<span class="source-line-no">016</span><span id="line-16">    public ModelEntity(Entity entity, ModelData modelData) {</span>
+<span class="source-line-no">016</span><span id="line-16">    public ModelEntity(UUID entity, ModelData modelData) {</span>
 <span class="source-line-no">017</span><span id="line-17">        this.entity = entity;</span>
 <span class="source-line-no">018</span><span id="line-18">        this.modelData = modelData;</span>
 <span class="source-line-no">019</span><span id="line-19">        this.extraBoneDataMap = Maps.newHashMap();</span>
@@ -137,19 +137,18 @@
 <span class="source-line-no">124</span><span id="line-124">     * 获取ModelEntity绑定的实体</span>
 <span class="source-line-no">125</span><span id="line-125">     * @return 实体</span>
 <span class="source-line-no">126</span><span id="line-126">     */</span>
-<span class="source-line-no">127</span><span id="line-127">    public Entity getEntity() {</span>
+<span class="source-line-no">127</span><span id="line-127">    public UUID getEntityUUID(){</span>
 <span class="source-line-no">128</span><span id="line-128">        return entity;</span>
 <span class="source-line-no">129</span><span id="line-129">    }</span>
-<span class="source-line-no">130</span><span id="line-130"></span>
-<span class="source-line-no">131</span><span id="line-131">    /**</span>
-<span class="source-line-no">132</span><span id="line-132">     * 获取绑定的模型</span>
-<span class="source-line-no">133</span><span id="line-133">     * @return 模型</span>
-<span class="source-line-no">134</span><span id="line-134">     */</span>
-<span class="source-line-no">135</span><span id="line-135">    public ModelData getModelData() {</span>
-<span class="source-line-no">136</span><span id="line-136">        return modelData;</span>
-<span class="source-line-no">137</span><span id="line-137">    }</span>
-<span class="source-line-no">138</span><span id="line-138">}</span>
-<span class="source-line-no">139</span><span id="line-139"></span>
+<span class="source-line-no">130</span><span id="line-130">    /**</span>
+<span class="source-line-no">131</span><span id="line-131">     * 获取绑定的模型</span>
+<span class="source-line-no">132</span><span id="line-132">     * @return 模型</span>
+<span class="source-line-no">133</span><span id="line-133">     */</span>
+<span class="source-line-no">134</span><span id="line-134">    public ModelData getModelData() {</span>
+<span class="source-line-no">135</span><span id="line-135">        return modelData;</span>
+<span class="source-line-no">136</span><span id="line-136">    }</span>
+<span class="source-line-no">137</span><span id="line-137">}</span>
+<span class="source-line-no">138</span><span id="line-138"></span>
 
 
 
