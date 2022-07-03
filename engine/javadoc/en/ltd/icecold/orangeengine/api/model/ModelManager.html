@@ -72,7 +72,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-22">ModelManager</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-24">ModelManager</a></span></div>
 <div class="block">Managing entity models.
  <p>
  Model operation process.
@@ -119,20 +119,31 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get all ModelEntity for the given model name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelDataByName(java.lang.String)" class="member-name-link">getModelDataByName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="java.util中的类或接口" class="external-link">Collection</a>&lt;org.bukkit.util.Vector&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBoneVector(java.lang.String,java.lang.String)" class="member-name-link">getBoneVector</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the bone position vector</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelDataByName(java.lang.String)" class="member-name-link">getModelDataByName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get model data by model name, note that modifying ModelData.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelEntity(java.util.UUID)" class="member-name-link">getModelEntity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelEntity(java.util.UUID)" class="member-name-link">getModelEntity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get ModelEntity by existing model entity UUID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="java.util中的类或接口" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>,<wbr><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelEntityMap()" class="member-name-link">getModelEntityMap</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="java.util中的类或接口" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>,<wbr><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModelEntityMap()" class="member-name-link">getModelEntityMap</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get all ModelEntity with entity UUID.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isModelCacheExists(java.lang.String)" class="member-name-link">isModelCacheExists</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Determine if local model cache data exists for a model</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeModelEntity(java.util.UUID,boolean)" class="member-name-link">removeModelEntity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid,
@@ -157,7 +168,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getModelEntity(java.util.UUID)">
 <h3>getModelEntity</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-29">getModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-31">getModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid)</span></div>
 <div class="block">Get ModelEntity by existing model entity UUID.</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -170,7 +181,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getModelDataByName(java.lang.String)">
 <h3>getModelDataByName</h3>
-<div class="member-signature"><span class="return-type"><a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-37">getModelDataByName</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
+<div class="member-signature"><span class="return-type"><a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-39">getModelDataByName</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">Get model data by model name, note that modifying ModelData.
  directly does not modify client-side rendering.</div>
 <dl class="notes">
@@ -184,7 +195,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getAllEntityByModel(java.lang.String)">
 <h3>getAllEntityByModel</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="java.util中的类或接口" class="external-link">List</a>&lt;<a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-44">getAllEntityByModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName)</span></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="java.util中的类或接口" class="external-link">List</a>&lt;<a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-46">getAllEntityByModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName)</span></div>
 <div class="block">Get all ModelEntity for the given model name.</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -197,7 +208,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addNewModelEntity(java.util.UUID,ltd.icecold.orangeengine.api.model.data.model.ModelData)">
 <h3>addNewModelEntity</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-57">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-59">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="data/model/ModelData.html" title="ltd.icecold.orangeengine.api.model.data.model中的类">ModelData</a>&nbsp;model)</span></div>
 <div class="block">Binding a model to an entity.
  <p>
@@ -222,7 +233,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addNewModelEntity(java.util.UUID,java.lang.String)">
 <h3>addNewModelEntity</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-73">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-75">addNewModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">Binding a model to an entity.
  <p>
@@ -245,7 +256,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="removeModelEntity(java.util.UUID,boolean)">
 <h3>removeModelEntity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-82">removeModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid,
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-84">removeModelEntity</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>&nbsp;uuid,
  boolean&nbsp;client)</span></div>
 <div class="block">Remove entity bound models.</div>
 <dl class="notes">
@@ -260,7 +271,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="changeModelPart(org.bukkit.entity.Entity,java.lang.String,java.lang.String,java.lang.String,java.lang.String)">
 <h3>changeModelPart</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-98">changeModelPart</a></span><wbr><span class="parameters">(org.bukkit.entity.Entity&nbsp;entity,
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-100">changeModelPart</a></span><wbr><span class="parameters">(org.bukkit.entity.Entity&nbsp;entity,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelId,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelPart,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;newModel,
@@ -291,11 +302,39 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getModelEntityMap()">
 <h3>getModelEntityMap</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="java.util中的类或接口" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>,<wbr><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-104">getModelEntityMap</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="java.util中的类或接口" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a>,<wbr><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-106">getModelEntityMap</a></span>()</div>
 <div class="block">Get all ModelEntity with entity UUID.</div>
 <dl class="notes">
 <dt>返回:</dt>
 <dd>All ModelEntity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isModelCacheExists(java.lang.String)">
+<h3>isModelCacheExists</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-113">isModelCacheExists</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName)</span></div>
+<div class="block">Determine if local model cache data exists for a model</div>
+<dl class="notes">
+<dt>参数:</dt>
+<dd><code>modelName</code> - Model name</dd>
+<dt>返回:</dt>
+<dd>if local model cache data exists for a model</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBoneVector(java.lang.String,java.lang.String)">
+<h3>getBoneVector</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html" title="java.util中的类或接口" class="external-link">Collection</a>&lt;org.bukkit.util.Vector&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelManager.html#line-121">getBoneVector</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;modelName,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</span></div>
+<div class="block">Get the bone position vector</div>
+<dl class="notes">
+<dt>参数:</dt>
+<dd><code>modelName</code> - Model name</dd>
+<dd><code>boneName</code> - Bone name</dd>
+<dt>返回:</dt>
+<dd>vector</dd>
 </dl>
 </section>
 </li>
