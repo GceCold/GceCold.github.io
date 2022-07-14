@@ -1,1 +1,0 @@
-const e={key:"v-60c7975c",path:"/guide/plugin/mythicmobs.html",title:"MythicMobs\u6269\u5C55",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5DF2\u517C\u5BB9\u7684ModelEngine\u6807\u7B7E",slug:"\u5DF2\u517C\u5BB9\u7684modelengine\u6807\u7B7E",children:[]}],git:{},filePathRelative:"guide/plugin/mythicmobs.md"};export{e as data};
