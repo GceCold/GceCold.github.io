@@ -1,4 +1,4 @@
-import{_ as e,c as n}from"./app.599f6916.js";const a={},s=n(`<h1 id="\u8D44\u6E90\u5305\u8BF4\u660E" tabindex="-1"><a class="header-anchor" href="#\u8D44\u6E90\u5305\u8BF4\u660E" aria-hidden="true">#</a> \u8D44\u6E90\u5305\u8BF4\u660E</h1><h2 id="\u76EE\u5F55\u7ED3\u6784" tabindex="-1"><a class="header-anchor" href="#\u76EE\u5F55\u7ED3\u6784" aria-hidden="true">#</a> \u76EE\u5F55\u7ED3\u6784</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>\u2514\u2500 plugins
+import{_ as e,d as n}from"./app.56595261.js";const a={},s=n(`<h1 id="\u8D44\u6E90\u5305\u8BF4\u660E" tabindex="-1"><a class="header-anchor" href="#\u8D44\u6E90\u5305\u8BF4\u660E" aria-hidden="true">#</a> \u8D44\u6E90\u5305\u8BF4\u660E</h1><h2 id="\u76EE\u5F55\u7ED3\u6784" tabindex="-1"><a class="header-anchor" href="#\u76EE\u5F55\u7ED3\u6784" aria-hidden="true">#</a> \u76EE\u5F55\u7ED3\u6784</h2><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>\u2514\u2500 plugins
    \u2514\u2500 OrangeEngine
       \u2514\u2500 resources         &lt;-  \u5BFC\u51FA\u8D44\u6E90\u5305
          \u251C\u2500 pack.mcmeta
