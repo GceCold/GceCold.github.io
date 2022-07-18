@@ -1,0 +1,1 @@
+const e={key:"v-fe955e54",path:"/guide/mythicmobs/mythicmobs.html",title:"\u5DF2\u517C\u5BB9\u7684ModelEngine\u6807\u7B7E",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"Mechanics",slug:"mechanics",children:[]},{level:3,title:"Targeters",slug:"targeters",children:[]}],git:{},filePathRelative:"guide/mythicmobs/mythicmobs.md"};export{e as data};
