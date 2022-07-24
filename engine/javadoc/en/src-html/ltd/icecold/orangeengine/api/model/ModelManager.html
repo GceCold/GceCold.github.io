@@ -13,126 +13,136 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">package ltd.icecold.orangeengine.api.model;</span>
 <span class="source-line-no">002</span><span id="line-2"></span>
-<span class="source-line-no">003</span><span id="line-3">import com.google.common.collect.Lists;</span>
-<span class="source-line-no">004</span><span id="line-4">import com.google.common.collect.Maps;</span>
-<span class="source-line-no">005</span><span id="line-5">import ltd.icecold.orangeengine.api.model.data.bone.ExtraBoneData;</span>
-<span class="source-line-no">006</span><span id="line-6">import ltd.icecold.orangeengine.api.model.data.model.ModelData;</span>
-<span class="source-line-no">007</span><span id="line-7">import org.bukkit.entity.Entity;</span>
-<span class="source-line-no">008</span><span id="line-8">import org.bukkit.entity.EntityType;</span>
-<span class="source-line-no">009</span><span id="line-9">import org.bukkit.util.Vector;</span>
-<span class="source-line-no">010</span><span id="line-10"></span>
-<span class="source-line-no">011</span><span id="line-11">import java.util.Collection;</span>
-<span class="source-line-no">012</span><span id="line-12">import java.util.List;</span>
-<span class="source-line-no">013</span><span id="line-13">import java.util.Map;</span>
-<span class="source-line-no">014</span><span id="line-14">import java.util.UUID;</span>
-<span class="source-line-no">015</span><span id="line-15"></span>
-<span class="source-line-no">016</span><span id="line-16">/**</span>
-<span class="source-line-no">017</span><span id="line-17"> * Managing entity models.</span>
-<span class="source-line-no">018</span><span id="line-18"> * &lt;p&gt;</span>
-<span class="source-line-no">019</span><span id="line-19"> * Model operation process.</span>
-<span class="source-line-no">020</span><span id="line-20"> * &lt;ul&gt; {@link ModelManager#addNewModelEntity(UUID, String)} binding models for Entity.&lt;/ul&gt;</span>
-<span class="source-line-no">021</span><span id="line-21"> * &lt;ul&gt; Get {@link ModelEntity} and you can change models</span>
-<span class="source-line-no">022</span><span id="line-22"> * , play animations, dynamically adjust bones, etc. for this entity.&lt;/ul&gt;</span>
-<span class="source-line-no">023</span><span id="line-23"> */</span>
-<span class="source-line-no">024</span><span id="line-24">public interface ModelManager {</span>
-<span class="source-line-no">025</span><span id="line-25"></span>
-<span class="source-line-no">026</span><span id="line-26">    /**</span>
-<span class="source-line-no">027</span><span id="line-27">     * Get ModelEntity by existing model entity UUID.</span>
-<span class="source-line-no">028</span><span id="line-28">     * @param uuid Entity UUID</span>
-<span class="source-line-no">029</span><span id="line-29">     * @return ModelEntity</span>
-<span class="source-line-no">030</span><span id="line-30">     */</span>
-<span class="source-line-no">031</span><span id="line-31">    ModelEntity getModelEntity(UUID uuid);</span>
-<span class="source-line-no">032</span><span id="line-32"></span>
-<span class="source-line-no">033</span><span id="line-33">    /**</span>
-<span class="source-line-no">034</span><span id="line-34">     * Get model data by model name, note that modifying ModelData.</span>
-<span class="source-line-no">035</span><span id="line-35">     * directly does not modify client-side rendering.</span>
-<span class="source-line-no">036</span><span id="line-36">     * @param model Model Name</span>
-<span class="source-line-no">037</span><span id="line-37">     * @return Model name</span>
-<span class="source-line-no">038</span><span id="line-38">     */</span>
-<span class="source-line-no">039</span><span id="line-39">    ModelData getModelDataByName(String model);</span>
-<span class="source-line-no">040</span><span id="line-40"></span>
-<span class="source-line-no">041</span><span id="line-41">    /**</span>
-<span class="source-line-no">042</span><span id="line-42">     * Get all ModelEntity for the given model name.</span>
-<span class="source-line-no">043</span><span id="line-43">     * @param modelName Model name</span>
-<span class="source-line-no">044</span><span id="line-44">     * @return All ModelEntity for the given model name</span>
-<span class="source-line-no">045</span><span id="line-45">     */</span>
-<span class="source-line-no">046</span><span id="line-46">    List&lt;ModelEntity&gt; getAllEntityByModel(String modelName);</span>
-<span class="source-line-no">047</span><span id="line-47"></span>
-<span class="source-line-no">048</span><span id="line-48">    /**</span>
-<span class="source-line-no">049</span><span id="line-49">     * Binding a model to an entity.</span>
-<span class="source-line-no">050</span><span id="line-50">     * &lt;p&gt;</span>
-<span class="source-line-no">051</span><span id="line-51">     * The model will not be rendered if it is not registered in the client resource package.</span>
-<span class="source-line-no">052</span><span id="line-52">     * &lt;p&gt;</span>
-<span class="source-line-no">053</span><span id="line-53">     * &lt;strong&gt;This method is not recommended, we recommend using {@link ModelManager#addNewModelEntity(UUID, String)}&lt;/strong&gt;</span>
-<span class="source-line-no">054</span><span id="line-54">     * @param entity Entity UUID</span>
-<span class="source-line-no">055</span><span id="line-55">     * @param model Model data</span>
-<span class="source-line-no">056</span><span id="line-56">     * @return ModelEntity</span>
-<span class="source-line-no">057</span><span id="line-57">     * @see ModelManager#addNewModelEntity(UUID, String)</span>
-<span class="source-line-no">058</span><span id="line-58">     */</span>
-<span class="source-line-no">059</span><span id="line-59">    ModelEntity addNewModelEntity(UUID entity, ModelData model);</span>
-<span class="source-line-no">060</span><span id="line-60"></span>
-<span class="source-line-no">061</span><span id="line-61">    /**</span>
-<span class="source-line-no">062</span><span id="line-62">     * Binding a model to an entity.</span>
+<span class="source-line-no">003</span><span id="line-3">import ltd.icecold.orangeengine.api.data.bone.ExtraBoneData;</span>
+<span class="source-line-no">004</span><span id="line-4">import ltd.icecold.orangeengine.api.data.model.ModelData;</span>
+<span class="source-line-no">005</span><span id="line-5">import org.bukkit.entity.Entity;</span>
+<span class="source-line-no">006</span><span id="line-6">import org.bukkit.util.Vector;</span>
+<span class="source-line-no">007</span><span id="line-7"></span>
+<span class="source-line-no">008</span><span id="line-8">import java.util.Collection;</span>
+<span class="source-line-no">009</span><span id="line-9">import java.util.List;</span>
+<span class="source-line-no">010</span><span id="line-10">import java.util.Map;</span>
+<span class="source-line-no">011</span><span id="line-11">import java.util.UUID;</span>
+<span class="source-line-no">012</span><span id="line-12"></span>
+<span class="source-line-no">013</span><span id="line-13">/**</span>
+<span class="source-line-no">014</span><span id="line-14"> * Managing entity models.</span>
+<span class="source-line-no">015</span><span id="line-15"> * &lt;p&gt;</span>
+<span class="source-line-no">016</span><span id="line-16"> * Model operation process.</span>
+<span class="source-line-no">017</span><span id="line-17"> * &lt;ul&gt; {@link ModelManager#addNewModelEntity(UUID, String)} binding models for Entity.&lt;/ul&gt;</span>
+<span class="source-line-no">018</span><span id="line-18"> * &lt;ul&gt; Get {@link ModelEntity} and you can change models</span>
+<span class="source-line-no">019</span><span id="line-19"> * , play animations, dynamically adjust bones, etc. for this entity.&lt;/ul&gt;</span>
+<span class="source-line-no">020</span><span id="line-20"> */</span>
+<span class="source-line-no">021</span><span id="line-21">public interface ModelManager {</span>
+<span class="source-line-no">022</span><span id="line-22"></span>
+<span class="source-line-no">023</span><span id="line-23">    /**</span>
+<span class="source-line-no">024</span><span id="line-24">     * Get ModelEntity by existing model entity UUID.</span>
+<span class="source-line-no">025</span><span id="line-25">     * @param uuid Entity UUID</span>
+<span class="source-line-no">026</span><span id="line-26">     * @return ModelEntity</span>
+<span class="source-line-no">027</span><span id="line-27">     */</span>
+<span class="source-line-no">028</span><span id="line-28">    ModelEntity getModelEntity(UUID uuid);</span>
+<span class="source-line-no">029</span><span id="line-29"></span>
+<span class="source-line-no">030</span><span id="line-30">    /**</span>
+<span class="source-line-no">031</span><span id="line-31">     * Get model data by model name, note that modifying ModelData.</span>
+<span class="source-line-no">032</span><span id="line-32">     * directly does not modify client-side rendering.</span>
+<span class="source-line-no">033</span><span id="line-33">     * @param model Model Name</span>
+<span class="source-line-no">034</span><span id="line-34">     * @return Model name</span>
+<span class="source-line-no">035</span><span id="line-35">     */</span>
+<span class="source-line-no">036</span><span id="line-36">    ModelData getModelDataByName(String model);</span>
+<span class="source-line-no">037</span><span id="line-37"></span>
+<span class="source-line-no">038</span><span id="line-38">    /**</span>
+<span class="source-line-no">039</span><span id="line-39">     * Get all ModelEntity for the given model name.</span>
+<span class="source-line-no">040</span><span id="line-40">     * @param modelName Model name</span>
+<span class="source-line-no">041</span><span id="line-41">     * @return All ModelEntity for the given model name</span>
+<span class="source-line-no">042</span><span id="line-42">     */</span>
+<span class="source-line-no">043</span><span id="line-43">    List&lt;ModelEntity&gt; getAllEntityByModel(String modelName);</span>
+<span class="source-line-no">044</span><span id="line-44"></span>
+<span class="source-line-no">045</span><span id="line-45">    /**</span>
+<span class="source-line-no">046</span><span id="line-46">     * Binding a model to an entity.</span>
+<span class="source-line-no">047</span><span id="line-47">     * &lt;p&gt;</span>
+<span class="source-line-no">048</span><span id="line-48">     * The model will not be rendered if it is not registered in the client resource package.</span>
+<span class="source-line-no">049</span><span id="line-49">     * &lt;p&gt;</span>
+<span class="source-line-no">050</span><span id="line-50">     * &lt;strong&gt;This method is not recommended, we recommend using {@link ModelManager#addNewModelEntity(UUID, String)}&lt;/strong&gt;</span>
+<span class="source-line-no">051</span><span id="line-51">     * @param entity Entity UUID</span>
+<span class="source-line-no">052</span><span id="line-52">     * @param model Model data</span>
+<span class="source-line-no">053</span><span id="line-53">     * @return ModelEntity</span>
+<span class="source-line-no">054</span><span id="line-54">     * @see ModelManager#addNewModelEntity(UUID, String)</span>
+<span class="source-line-no">055</span><span id="line-55">     */</span>
+<span class="source-line-no">056</span><span id="line-56">    ModelEntity addNewModelEntity(UUID entity, ModelData model);</span>
+<span class="source-line-no">057</span><span id="line-57"></span>
+<span class="source-line-no">058</span><span id="line-58">    /**</span>
+<span class="source-line-no">059</span><span id="line-59">     * Binding a model to an entity.</span>
+<span class="source-line-no">060</span><span id="line-60">     * &lt;p&gt;</span>
+<span class="source-line-no">061</span><span id="line-61">     * The model will not be rendered if it is</span>
+<span class="source-line-no">062</span><span id="line-62">     * not registered in the client resource package.</span>
 <span class="source-line-no">063</span><span id="line-63">     * &lt;p&gt;</span>
-<span class="source-line-no">064</span><span id="line-64">     * The model will not be rendered if it is</span>
-<span class="source-line-no">065</span><span id="line-65">     * not registered in the client resource package.</span>
-<span class="source-line-no">066</span><span id="line-66">     * &lt;p&gt;</span>
-<span class="source-line-no">067</span><span id="line-67">     * &lt;strong&gt;</span>
-<span class="source-line-no">068</span><span id="line-68">     * This method is not recommended,</span>
-<span class="source-line-no">069</span><span id="line-69">     * we recommend using {@link ModelManager#addNewModelEntity(UUID, String)}.</span>
-<span class="source-line-no">070</span><span id="line-70">     * &lt;/strong&gt;</span>
-<span class="source-line-no">071</span><span id="line-71">     * @param entity Entity UUID</span>
-<span class="source-line-no">072</span><span id="line-72">     * @param model Model name</span>
-<span class="source-line-no">073</span><span id="line-73">     * @return ModelEntity</span>
-<span class="source-line-no">074</span><span id="line-74">     */</span>
-<span class="source-line-no">075</span><span id="line-75">    ModelEntity addNewModelEntity(UUID entity,String model);</span>
-<span class="source-line-no">076</span><span id="line-76"></span>
-<span class="source-line-no">077</span><span id="line-77">    /**</span>
-<span class="source-line-no">078</span><span id="line-78">     * Remove entity bound models.</span>
-<span class="source-line-no">079</span><span id="line-79">     * @param uuid Entity UUID</span>
-<span class="source-line-no">080</span><span id="line-80">     * @param client Whether to send a command to the client, if TRUE then the client will</span>
-<span class="source-line-no">081</span><span id="line-81">     *              remove the entity model rendering to restore the original entity type model,</span>
-<span class="source-line-no">082</span><span id="line-82">     *              FALSE then the client will not remove the current model rendering only its data on the server.</span>
-<span class="source-line-no">083</span><span id="line-83">     */</span>
-<span class="source-line-no">084</span><span id="line-84">    void removeModelEntity(UUID uuid,boolean client);</span>
-<span class="source-line-no">085</span><span id="line-85"></span>
-<span class="source-line-no">086</span><span id="line-86">    /**</span>
-<span class="source-line-no">087</span><span id="line-87">     * Modify model bone rendering state, modify bone display state.</span>
-<span class="source-line-no">088</span><span id="line-88">     * &lt;p&gt;</span>
-<span class="source-line-no">089</span><span id="line-89">     * &lt;strong&gt;Added for ModelEngine tag compatibility. Not recommended for developers!&lt;/strong&gt;</span>
-<span class="source-line-no">090</span><span id="line-90">     * &lt;p&gt;</span>
-<span class="source-line-no">091</span><span id="line-91">     * Recommend using {@link ModelEntity#addBoneExtraData(String, ExtraBoneData)} to modify the bones.</span>
-<span class="source-line-no">092</span><span id="line-92">     * @param entity Entity UUID</span>
-<span class="source-line-no">093</span><span id="line-93">     * @param modelId Model name</span>
-<span class="source-line-no">094</span><span id="line-94">     * @param modelPart Old bone name</span>
-<span class="source-line-no">095</span><span id="line-95">     * @param newModel New model name (if same as modelId, do not modify model only bones)</span>
-<span class="source-line-no">096</span><span id="line-96">     * @param newModelPart New bone name</span>
-<span class="source-line-no">097</span><span id="line-97">     * @return Is successfully modified</span>
-<span class="source-line-no">098</span><span id="line-98">     * @see ModelEntity#addBoneExtraData(String, ExtraBoneData)</span>
-<span class="source-line-no">099</span><span id="line-99">     */</span>
-<span class="source-line-no">100</span><span id="line-100">    boolean changeModelPart(Entity entity,String modelId,String modelPart,String newModel,String newModelPart);</span>
-<span class="source-line-no">101</span><span id="line-101"></span>
-<span class="source-line-no">102</span><span id="line-102">    /**</span>
-<span class="source-line-no">103</span><span id="line-103">     * Get all ModelEntity with entity UUID.</span>
-<span class="source-line-no">104</span><span id="line-104">     * @return All ModelEntity</span>
-<span class="source-line-no">105</span><span id="line-105">     */</span>
-<span class="source-line-no">106</span><span id="line-106">    Map&lt;UUID, ModelEntity&gt; getModelEntityMap();</span>
-<span class="source-line-no">107</span><span id="line-107"></span>
-<span class="source-line-no">108</span><span id="line-108">    /**</span>
-<span class="source-line-no">109</span><span id="line-109">     * Determine if local model cache data exists for a model</span>
-<span class="source-line-no">110</span><span id="line-110">     * @param modelName Model name</span>
-<span class="source-line-no">111</span><span id="line-111">     * @return if local model cache data exists for a model</span>
-<span class="source-line-no">112</span><span id="line-112">     */</span>
-<span class="source-line-no">113</span><span id="line-113">    boolean isModelCacheExists(String modelName);</span>
-<span class="source-line-no">114</span><span id="line-114"></span>
-<span class="source-line-no">115</span><span id="line-115">    /**</span>
-<span class="source-line-no">116</span><span id="line-116">     * Get the bone position vector</span>
-<span class="source-line-no">117</span><span id="line-117">     * @param modelName Model name</span>
-<span class="source-line-no">118</span><span id="line-118">     * @param boneName Bone name</span>
-<span class="source-line-no">119</span><span id="line-119">     * @return vector</span>
-<span class="source-line-no">120</span><span id="line-120">     */</span>
-<span class="source-line-no">121</span><span id="line-121">    Collection&lt;Vector&gt; getBoneVector(String modelName, String boneName);</span>
-<span class="source-line-no">122</span><span id="line-122">}</span>
+<span class="source-line-no">064</span><span id="line-64">     * &lt;strong&gt;</span>
+<span class="source-line-no">065</span><span id="line-65">     * This method is not recommended,</span>
+<span class="source-line-no">066</span><span id="line-66">     * we recommend using {@link ModelManager#addNewModelEntity(UUID, String)}.</span>
+<span class="source-line-no">067</span><span id="line-67">     * &lt;/strong&gt;</span>
+<span class="source-line-no">068</span><span id="line-68">     * @param entity Entity UUID</span>
+<span class="source-line-no">069</span><span id="line-69">     * @param model Model name</span>
+<span class="source-line-no">070</span><span id="line-70">     * @return ModelEntity</span>
+<span class="source-line-no">071</span><span id="line-71">     */</span>
+<span class="source-line-no">072</span><span id="line-72">    ModelEntity addNewModelEntity(UUID entity,String model);</span>
+<span class="source-line-no">073</span><span id="line-73"></span>
+<span class="source-line-no">074</span><span id="line-74">    /**</span>
+<span class="source-line-no">075</span><span id="line-75">     * Remove entity bound models.</span>
+<span class="source-line-no">076</span><span id="line-76">     * @param uuid Entity UUID</span>
+<span class="source-line-no">077</span><span id="line-77">     * @param client Whether to send a command to the client, if TRUE then the client will</span>
+<span class="source-line-no">078</span><span id="line-78">     *              remove the entity model rendering to restore the original entity type model,</span>
+<span class="source-line-no">079</span><span id="line-79">     *              FALSE then the client will not remove the current model rendering only its data on the server.</span>
+<span class="source-line-no">080</span><span id="line-80">     */</span>
+<span class="source-line-no">081</span><span id="line-81">    void removeModelEntity(UUID uuid,boolean client);</span>
+<span class="source-line-no">082</span><span id="line-82"></span>
+<span class="source-line-no">083</span><span id="line-83">    /**</span>
+<span class="source-line-no">084</span><span id="line-84">     * Modify model bone rendering state, modify bone display state.</span>
+<span class="source-line-no">085</span><span id="line-85">     * &lt;p&gt;</span>
+<span class="source-line-no">086</span><span id="line-86">     * &lt;strong&gt;Added for ModelEngine tag compatibility. Not recommended for developers!&lt;/strong&gt;</span>
+<span class="source-line-no">087</span><span id="line-87">     * &lt;p&gt;</span>
+<span class="source-line-no">088</span><span id="line-88">     * Recommend using {@link ModelEntity#addBoneExtraData(String, ExtraBoneData)} to modify the bones.</span>
+<span class="source-line-no">089</span><span id="line-89">     * @param entity Entity UUID</span>
+<span class="source-line-no">090</span><span id="line-90">     * @param modelId Model name</span>
+<span class="source-line-no">091</span><span id="line-91">     * @param modelPart Old bone name</span>
+<span class="source-line-no">092</span><span id="line-92">     * @param newModel New model name (if same as modelId, do not modify model only bones)</span>
+<span class="source-line-no">093</span><span id="line-93">     * @param newModelPart New bone name</span>
+<span class="source-line-no">094</span><span id="line-94">     * @return Is successfully modified</span>
+<span class="source-line-no">095</span><span id="line-95">     * @see ModelEntity#addBoneExtraData(String, ExtraBoneData)</span>
+<span class="source-line-no">096</span><span id="line-96">     */</span>
+<span class="source-line-no">097</span><span id="line-97">    boolean changeModelPart(Entity entity,String modelId,String modelPart,String newModel,String newModelPart);</span>
+<span class="source-line-no">098</span><span id="line-98"></span>
+<span class="source-line-no">099</span><span id="line-99">    /**</span>
+<span class="source-line-no">100</span><span id="line-100">     * Get all ModelEntity with entity UUID.</span>
+<span class="source-line-no">101</span><span id="line-101">     * @return All ModelEntity</span>
+<span class="source-line-no">102</span><span id="line-102">     */</span>
+<span class="source-line-no">103</span><span id="line-103">    Map&lt;UUID, ModelEntity&gt; getModelEntityMap();</span>
+<span class="source-line-no">104</span><span id="line-104"></span>
+<span class="source-line-no">105</span><span id="line-105">    /**</span>
+<span class="source-line-no">106</span><span id="line-106">     * Determine if local model cache data exists for a model</span>
+<span class="source-line-no">107</span><span id="line-107">     * @param modelName Model name</span>
+<span class="source-line-no">108</span><span id="line-108">     * @return If local model cache data exists for a model</span>
+<span class="source-line-no">109</span><span id="line-109">     */</span>
+<span class="source-line-no">110</span><span id="line-110">    boolean isModelCacheExists(String modelName);</span>
+<span class="source-line-no">111</span><span id="line-111"></span>
+<span class="source-line-no">112</span><span id="line-112">    /**</span>
+<span class="source-line-no">113</span><span id="line-113">     * Get the bone position vector</span>
+<span class="source-line-no">114</span><span id="line-114">     * @param modelName Model name</span>
+<span class="source-line-no">115</span><span id="line-115">     * @param boneName Bone name</span>
+<span class="source-line-no">116</span><span id="line-116">     * @return vector</span>
+<span class="source-line-no">117</span><span id="line-117">     */</span>
+<span class="source-line-no">118</span><span id="line-118">    Collection&lt;Vector&gt; getBoneVector(String modelName, String boneName);</span>
+<span class="source-line-no">119</span><span id="line-119"></span>
+<span class="source-line-no">120</span><span id="line-120">    /**</span>
+<span class="source-line-no">121</span><span id="line-121">     * Get the animation name contained in the model</span>
+<span class="source-line-no">122</span><span id="line-122">     * @param modelName Model name</span>
+<span class="source-line-no">123</span><span id="line-123">     * @return List</span>
+<span class="source-line-no">124</span><span id="line-124">     */</span>
+<span class="source-line-no">125</span><span id="line-125">    List&lt;String&gt; getModelAnimations(String modelName);</span>
+<span class="source-line-no">126</span><span id="line-126"></span>
+<span class="source-line-no">127</span><span id="line-127">    /**</span>
+<span class="source-line-no">128</span><span id="line-128">     * Get loaded model data</span>
+<span class="source-line-no">129</span><span id="line-129">     * @return Model data</span>
+<span class="source-line-no">130</span><span id="line-130">     */</span>
+<span class="source-line-no">131</span><span id="line-131">    Map&lt;String,ModelData&gt; getAllModelData();</span>
+<span class="source-line-no">132</span><span id="line-132">}</span>
 
 
 

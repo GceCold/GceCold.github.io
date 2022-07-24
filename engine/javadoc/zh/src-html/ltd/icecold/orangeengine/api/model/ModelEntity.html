@@ -13,9 +13,9 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">package ltd.icecold.orangeengine.api.model;</span>
 <span class="source-line-no">002</span><span id="line-2"></span>
-<span class="source-line-no">003</span><span id="line-3">import ltd.icecold.orangeengine.api.model.data.bone.ExtraBoneData;</span>
-<span class="source-line-no">004</span><span id="line-4">import ltd.icecold.orangeengine.api.model.data.model.AnimationType;</span>
-<span class="source-line-no">005</span><span id="line-5">import ltd.icecold.orangeengine.api.model.data.model.ModelData;</span>
+<span class="source-line-no">003</span><span id="line-3">import ltd.icecold.orangeengine.api.data.bone.ExtraBoneData;</span>
+<span class="source-line-no">004</span><span id="line-4">import ltd.icecold.orangeengine.api.data.model.AnimationType;</span>
+<span class="source-line-no">005</span><span id="line-5">import ltd.icecold.orangeengine.api.data.model.ModelData;</span>
 <span class="source-line-no">006</span><span id="line-6">import org.bukkit.entity.Player;</span>
 <span class="source-line-no">007</span><span id="line-7"></span>
 <span class="source-line-no">008</span><span id="line-8">import java.util.UUID;</span>
@@ -114,113 +114,115 @@
 <span class="source-line-no">101</span><span id="line-101">    ModelEntity setDefaultState(AnimationType type, String animation);</span>
 <span class="source-line-no">102</span><span id="line-102"></span>
 <span class="source-line-no">103</span><span id="line-103">    /**</span>
-<span class="source-line-no">104</span><span id="line-104">     * 实体是否可见，使用{@link org.bukkit.entity.LivingEntity#setInvisible}同样生效</span>
-<span class="source-line-no">105</span><span id="line-105">     * @param visible 是否可见</span>
-<span class="source-line-no">106</span><span id="line-106">     * @return ModelEntity</span>
-<span class="source-line-no">107</span><span id="line-107">     */</span>
-<span class="source-line-no">108</span><span id="line-108">    ModelEntity setVisible(boolean visible);</span>
-<span class="source-line-no">109</span><span id="line-109"></span>
-<span class="source-line-no">110</span><span id="line-110">    /**</span>
-<span class="source-line-no">111</span><span id="line-111">     * 是否覆盖碰撞箱，默认使用配置文件设置的碰撞箱大小，默认true</span>
-<span class="source-line-no">112</span><span id="line-112">     * @param overwrite 覆盖</span>
-<span class="source-line-no">113</span><span id="line-113">     * @return ModelEntity</span>
-<span class="source-line-no">114</span><span id="line-114">     */</span>
-<span class="source-line-no">115</span><span id="line-115">    ModelEntity overwriteBoundingBox(boolean overwrite);</span>
-<span class="source-line-no">116</span><span id="line-116"></span>
-<span class="source-line-no">117</span><span id="line-117">    /**</span>
-<span class="source-line-no">118</span><span id="line-118">     * 手动设置碰撞箱 设置后将覆盖配置文件碰撞箱大小</span>
-<span class="source-line-no">119</span><span id="line-119">     * &lt;p&gt;所有客户端对该实体均生效</span>
-<span class="source-line-no">120</span><span id="line-120">     * @param width 碰撞箱宽度</span>
-<span class="source-line-no">121</span><span id="line-121">     * @param height 碰撞箱高度</span>
-<span class="source-line-no">122</span><span id="line-122">     * @return ModelEntity</span>
-<span class="source-line-no">123</span><span id="line-123">     */</span>
-<span class="source-line-no">124</span><span id="line-124">    ModelEntity setBoundingBox(double width, double height);</span>
-<span class="source-line-no">125</span><span id="line-125"></span>
-<span class="source-line-no">126</span><span id="line-126">    /**</span>
-<span class="source-line-no">127</span><span id="line-127">     * 锁定模型视角</span>
-<span class="source-line-no">128</span><span id="line-128">     * @param yaw</span>
-<span class="source-line-no">129</span><span id="line-129">     * @return ModelEntity</span>
-<span class="source-line-no">130</span><span id="line-130">     */</span>
-<span class="source-line-no">131</span><span id="line-131">    ModelEntity setLockYaw(float yaw);</span>
-<span class="source-line-no">132</span><span id="line-132">    /**</span>
-<span class="source-line-no">133</span><span id="line-133">     * 锁定模型视角</span>
-<span class="source-line-no">134</span><span id="line-134">     * @param pitch</span>
-<span class="source-line-no">135</span><span id="line-135">     * @return ModelEntity</span>
-<span class="source-line-no">136</span><span id="line-136">     */</span>
-<span class="source-line-no">137</span><span id="line-137">    ModelEntity setLockPitch(float pitch);</span>
-<span class="source-line-no">138</span><span id="line-138"></span>
-<span class="source-line-no">139</span><span id="line-139">    /**</span>
-<span class="source-line-no">140</span><span id="line-140">     * 是否解除角度锁定</span>
-<span class="source-line-no">141</span><span id="line-141">     * @param unlock</span>
-<span class="source-line-no">142</span><span id="line-142">     * @return ModelEntity</span>
-<span class="source-line-no">143</span><span id="line-143">     */</span>
-<span class="source-line-no">144</span><span id="line-144">    ModelEntity unlockYaw(boolean unlock);</span>
-<span class="source-line-no">145</span><span id="line-145"></span>
-<span class="source-line-no">146</span><span id="line-146">    /**</span>
-<span class="source-line-no">147</span><span id="line-147">     * 是否解除角度锁定</span>
-<span class="source-line-no">148</span><span id="line-148">     * @param unlock</span>
-<span class="source-line-no">149</span><span id="line-149">     * @return ModelEntity</span>
-<span class="source-line-no">150</span><span id="line-150">     */</span>
-<span class="source-line-no">151</span><span id="line-151">    ModelEntity unlockPitch(boolean unlock);</span>
-<span class="source-line-no">152</span><span id="line-152"></span>
-<span class="source-line-no">153</span><span id="line-153">    /**</span>
-<span class="source-line-no">154</span><span id="line-154">     * 动态修改骨骼贴图颜色</span>
-<span class="source-line-no">155</span><span id="line-155">     * &lt;p&gt;所有客户端对该实体均生效</span>
-<span class="source-line-no">156</span><span id="line-156">     * @param bone 骨骼名</span>
-<span class="source-line-no">157</span><span id="line-157">     * @param red red</span>
-<span class="source-line-no">158</span><span id="line-158">     * @param green green</span>
-<span class="source-line-no">159</span><span id="line-159">     * @param blue blue</span>
-<span class="source-line-no">160</span><span id="line-160">     * @param alpha alpha</span>
-<span class="source-line-no">161</span><span id="line-161">     * @return ModelEntity</span>
-<span class="source-line-no">162</span><span id="line-162">     */</span>
-<span class="source-line-no">163</span><span id="line-163">    ModelEntity boneColor(String bone, int red, int green, int blue, int alpha);</span>
-<span class="source-line-no">164</span><span id="line-164"></span>
-<span class="source-line-no">165</span><span id="line-165">    /**</span>
-<span class="source-line-no">166</span><span id="line-166">     * 添加其他模型的骨骼到目前模型上</span>
-<span class="source-line-no">167</span><span id="line-167">     * @param model 模型名</span>
-<span class="source-line-no">168</span><span id="line-168">     * @param bonePart 骨骼名</span>
-<span class="source-line-no">169</span><span id="line-169">     * @return ModelEntity</span>
-<span class="source-line-no">170</span><span id="line-170">     */</span>
-<span class="source-line-no">171</span><span id="line-171">    ModelEntity addSubModel(String model,String bonePart);</span>
-<span class="source-line-no">172</span><span id="line-172"></span>
-<span class="source-line-no">173</span><span id="line-173">    /**</span>
-<span class="source-line-no">174</span><span id="line-174">     * 移除添加的其他模型的骨骼</span>
-<span class="source-line-no">175</span><span id="line-175">     * @param model 模型名</span>
-<span class="source-line-no">176</span><span id="line-176">     * @param bonePart 骨骼名</span>
-<span class="source-line-no">177</span><span id="line-177">     * @return ModelEntity</span>
-<span class="source-line-no">178</span><span id="line-178">     */</span>
-<span class="source-line-no">179</span><span id="line-179">    ModelEntity removeSubModel(String model,String bonePart);</span>
-<span class="source-line-no">180</span><span id="line-180"></span>
-<span class="source-line-no">181</span><span id="line-181">    /**</span>
-<span class="source-line-no">182</span><span id="line-182">     * 客户端将只渲染体一个固定的模型在当前位置</span>
-<span class="source-line-no">183</span><span id="line-183">     * &lt;p&gt;</span>
-<span class="source-line-no">184</span><span id="line-184">     * &lt;strong&gt;设置前请设置取消实体AI，否则会造成客户端看不到的透明实体对其他实体进行攻击等活动&lt;/strong&gt;</span>
-<span class="source-line-no">185</span><span id="line-185">     * @param model 模型名</span>
-<span class="source-line-no">186</span><span id="line-186">     * @return ModelEntity</span>
-<span class="source-line-no">187</span><span id="line-187">     */</span>
-<span class="source-line-no">188</span><span id="line-188">    ModelEntity inactive(String model);</span>
-<span class="source-line-no">189</span><span id="line-189"></span>
-<span class="source-line-no">190</span><span id="line-190">    /**</span>
-<span class="source-line-no">191</span><span id="line-191">     * 获取指定骨骼的附加数据</span>
-<span class="source-line-no">192</span><span id="line-192">     * @param boneName 骨骼名</span>
-<span class="source-line-no">193</span><span id="line-193">     * @return ModelEntity</span>
-<span class="source-line-no">194</span><span id="line-194">     * @see ModelEntity#addBoneExtraData</span>
-<span class="source-line-no">195</span><span id="line-195">     */</span>
-<span class="source-line-no">196</span><span id="line-196">    ExtraBoneData getBoneExtraData(String boneName);</span>
-<span class="source-line-no">197</span><span id="line-197"></span>
-<span class="source-line-no">198</span><span id="line-198">    /**</span>
-<span class="source-line-no">199</span><span id="line-199">     * 获取ModelEntity绑定的实体UUID</span>
-<span class="source-line-no">200</span><span id="line-200">     * @return 实体</span>
-<span class="source-line-no">201</span><span id="line-201">     */</span>
-<span class="source-line-no">202</span><span id="line-202">    UUID getEntityUUID();</span>
-<span class="source-line-no">203</span><span id="line-203"></span>
-<span class="source-line-no">204</span><span id="line-204">    /**</span>
-<span class="source-line-no">205</span><span id="line-205">     * 获取绑定的模型</span>
-<span class="source-line-no">206</span><span id="line-206">     * @return 模型</span>
-<span class="source-line-no">207</span><span id="line-207">     */</span>
-<span class="source-line-no">208</span><span id="line-208">    ModelData getModelData();</span>
-<span class="source-line-no">209</span><span id="line-209">}</span>
-<span class="source-line-no">210</span><span id="line-210"></span>
+<span class="source-line-no">104</span><span id="line-104">     * 实体是否可见</span>
+<span class="source-line-no">105</span><span id="line-105">     * &lt;p&gt;</span>
+<span class="source-line-no">106</span><span id="line-106">     * 使用{@link org.bukkit.entity.LivingEntity#setInvisible}同样生效</span>
+<span class="source-line-no">107</span><span id="line-107">     * @param visible 是否可见</span>
+<span class="source-line-no">108</span><span id="line-108">     * @return ModelEntity</span>
+<span class="source-line-no">109</span><span id="line-109">     */</span>
+<span class="source-line-no">110</span><span id="line-110">    ModelEntity setVisible(boolean visible);</span>
+<span class="source-line-no">111</span><span id="line-111"></span>
+<span class="source-line-no">112</span><span id="line-112">    /**</span>
+<span class="source-line-no">113</span><span id="line-113">     * 是否覆盖碰撞箱，默认使用配置文件设置的碰撞箱大小，默认true</span>
+<span class="source-line-no">114</span><span id="line-114">     * @param overwrite 覆盖</span>
+<span class="source-line-no">115</span><span id="line-115">     * @return ModelEntity</span>
+<span class="source-line-no">116</span><span id="line-116">     */</span>
+<span class="source-line-no">117</span><span id="line-117">    ModelEntity overwriteBoundingBox(boolean overwrite);</span>
+<span class="source-line-no">118</span><span id="line-118"></span>
+<span class="source-line-no">119</span><span id="line-119">    /**</span>
+<span class="source-line-no">120</span><span id="line-120">     * 手动设置碰撞箱 设置后将覆盖配置文件碰撞箱大小</span>
+<span class="source-line-no">121</span><span id="line-121">     * &lt;p&gt;所有客户端对该实体均生效</span>
+<span class="source-line-no">122</span><span id="line-122">     * @param width 碰撞箱宽度</span>
+<span class="source-line-no">123</span><span id="line-123">     * @param height 碰撞箱高度</span>
+<span class="source-line-no">124</span><span id="line-124">     * @return ModelEntity</span>
+<span class="source-line-no">125</span><span id="line-125">     */</span>
+<span class="source-line-no">126</span><span id="line-126">    ModelEntity setBoundingBox(double width, double height);</span>
+<span class="source-line-no">127</span><span id="line-127"></span>
+<span class="source-line-no">128</span><span id="line-128">    /**</span>
+<span class="source-line-no">129</span><span id="line-129">     * 锁定模型视角</span>
+<span class="source-line-no">130</span><span id="line-130">     * @param yaw</span>
+<span class="source-line-no">131</span><span id="line-131">     * @return ModelEntity</span>
+<span class="source-line-no">132</span><span id="line-132">     */</span>
+<span class="source-line-no">133</span><span id="line-133">    ModelEntity setLockYaw(float yaw);</span>
+<span class="source-line-no">134</span><span id="line-134">    /**</span>
+<span class="source-line-no">135</span><span id="line-135">     * 锁定模型视角</span>
+<span class="source-line-no">136</span><span id="line-136">     * @param pitch</span>
+<span class="source-line-no">137</span><span id="line-137">     * @return ModelEntity</span>
+<span class="source-line-no">138</span><span id="line-138">     */</span>
+<span class="source-line-no">139</span><span id="line-139">    ModelEntity setLockPitch(float pitch);</span>
+<span class="source-line-no">140</span><span id="line-140"></span>
+<span class="source-line-no">141</span><span id="line-141">    /**</span>
+<span class="source-line-no">142</span><span id="line-142">     * 是否解除角度锁定</span>
+<span class="source-line-no">143</span><span id="line-143">     * @param unlock</span>
+<span class="source-line-no">144</span><span id="line-144">     * @return ModelEntity</span>
+<span class="source-line-no">145</span><span id="line-145">     */</span>
+<span class="source-line-no">146</span><span id="line-146">    ModelEntity unlockYaw(boolean unlock);</span>
+<span class="source-line-no">147</span><span id="line-147"></span>
+<span class="source-line-no">148</span><span id="line-148">    /**</span>
+<span class="source-line-no">149</span><span id="line-149">     * 是否解除角度锁定</span>
+<span class="source-line-no">150</span><span id="line-150">     * @param unlock</span>
+<span class="source-line-no">151</span><span id="line-151">     * @return ModelEntity</span>
+<span class="source-line-no">152</span><span id="line-152">     */</span>
+<span class="source-line-no">153</span><span id="line-153">    ModelEntity unlockPitch(boolean unlock);</span>
+<span class="source-line-no">154</span><span id="line-154"></span>
+<span class="source-line-no">155</span><span id="line-155">    /**</span>
+<span class="source-line-no">156</span><span id="line-156">     * 动态修改骨骼贴图颜色</span>
+<span class="source-line-no">157</span><span id="line-157">     * &lt;p&gt;所有客户端对该实体均生效</span>
+<span class="source-line-no">158</span><span id="line-158">     * @param bone 骨骼名</span>
+<span class="source-line-no">159</span><span id="line-159">     * @param red red</span>
+<span class="source-line-no">160</span><span id="line-160">     * @param green green</span>
+<span class="source-line-no">161</span><span id="line-161">     * @param blue blue</span>
+<span class="source-line-no">162</span><span id="line-162">     * @param alpha alpha</span>
+<span class="source-line-no">163</span><span id="line-163">     * @return ModelEntity</span>
+<span class="source-line-no">164</span><span id="line-164">     */</span>
+<span class="source-line-no">165</span><span id="line-165">    ModelEntity boneColor(String bone, int red, int green, int blue, int alpha);</span>
+<span class="source-line-no">166</span><span id="line-166"></span>
+<span class="source-line-no">167</span><span id="line-167">    /**</span>
+<span class="source-line-no">168</span><span id="line-168">     * 添加其他模型的骨骼到目前模型上</span>
+<span class="source-line-no">169</span><span id="line-169">     * @param model 模型名</span>
+<span class="source-line-no">170</span><span id="line-170">     * @param bonePart 骨骼名</span>
+<span class="source-line-no">171</span><span id="line-171">     * @return ModelEntity</span>
+<span class="source-line-no">172</span><span id="line-172">     */</span>
+<span class="source-line-no">173</span><span id="line-173">    ModelEntity addSubModel(String model,String bonePart);</span>
+<span class="source-line-no">174</span><span id="line-174"></span>
+<span class="source-line-no">175</span><span id="line-175">    /**</span>
+<span class="source-line-no">176</span><span id="line-176">     * 移除添加的其他模型的骨骼</span>
+<span class="source-line-no">177</span><span id="line-177">     * @param model 模型名</span>
+<span class="source-line-no">178</span><span id="line-178">     * @param bonePart 骨骼名</span>
+<span class="source-line-no">179</span><span id="line-179">     * @return ModelEntity</span>
+<span class="source-line-no">180</span><span id="line-180">     */</span>
+<span class="source-line-no">181</span><span id="line-181">    ModelEntity removeSubModel(String model,String bonePart);</span>
+<span class="source-line-no">182</span><span id="line-182"></span>
+<span class="source-line-no">183</span><span id="line-183">    /**</span>
+<span class="source-line-no">184</span><span id="line-184">     * 客户端将只渲染体一个固定的模型在当前位置</span>
+<span class="source-line-no">185</span><span id="line-185">     * &lt;p&gt;</span>
+<span class="source-line-no">186</span><span id="line-186">     * &lt;strong&gt;设置前请设置取消实体AI，否则会造成客户端看不到的透明实体对其他实体进行攻击等活动&lt;/strong&gt;</span>
+<span class="source-line-no">187</span><span id="line-187">     * @param model 模型名</span>
+<span class="source-line-no">188</span><span id="line-188">     * @return ModelEntity</span>
+<span class="source-line-no">189</span><span id="line-189">     */</span>
+<span class="source-line-no">190</span><span id="line-190">    ModelEntity inactive(String model);</span>
+<span class="source-line-no">191</span><span id="line-191"></span>
+<span class="source-line-no">192</span><span id="line-192">    /**</span>
+<span class="source-line-no">193</span><span id="line-193">     * 获取指定骨骼的附加数据</span>
+<span class="source-line-no">194</span><span id="line-194">     * @param boneName 骨骼名</span>
+<span class="source-line-no">195</span><span id="line-195">     * @return ModelEntity</span>
+<span class="source-line-no">196</span><span id="line-196">     * @see ModelEntity#addBoneExtraData</span>
+<span class="source-line-no">197</span><span id="line-197">     */</span>
+<span class="source-line-no">198</span><span id="line-198">    ExtraBoneData getBoneExtraData(String boneName);</span>
+<span class="source-line-no">199</span><span id="line-199"></span>
+<span class="source-line-no">200</span><span id="line-200">    /**</span>
+<span class="source-line-no">201</span><span id="line-201">     * 获取ModelEntity绑定的实体UUID</span>
+<span class="source-line-no">202</span><span id="line-202">     * @return 实体</span>
+<span class="source-line-no">203</span><span id="line-203">     */</span>
+<span class="source-line-no">204</span><span id="line-204">    UUID getEntityUUID();</span>
+<span class="source-line-no">205</span><span id="line-205"></span>
+<span class="source-line-no">206</span><span id="line-206">    /**</span>
+<span class="source-line-no">207</span><span id="line-207">     * 获取绑定的模型</span>
+<span class="source-line-no">208</span><span id="line-208">     * @return 模型</span>
+<span class="source-line-no">209</span><span id="line-209">     */</span>
+<span class="source-line-no">210</span><span id="line-210">    ModelData getModelData();</span>
+<span class="source-line-no">211</span><span id="line-211">}</span>
+<span class="source-line-no">212</span><span id="line-212"></span>
 
 
 
