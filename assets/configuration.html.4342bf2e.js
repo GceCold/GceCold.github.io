@@ -1,0 +1,1 @@
+const t={key:"v-4b25f4e0",path:"/guide/plugin/collada/configuration.html",title:"\u914D\u7F6E\u6587\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1663062018e3,contributors:[{name:"IceCold",email:"736131306@qq.com",commits:1}]},filePathRelative:"guide/plugin/collada/configuration.md"};export{t as data};
