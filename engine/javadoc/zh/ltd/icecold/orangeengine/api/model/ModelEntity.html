@@ -35,6 +35,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">程序包</a></li>
 <li class="nav-bar-cell1-rev">类</li>
 <li><a href="package-tree.html">树</a></li>
+<li><a href="../../../../../deprecated-list.html">已过时</a></li>
 <li><a href="../../../../../index-all.html">索引</a></li>
 <li><a href="../../../../../help-doc.html#class">帮助</a></li>
 </ul>
@@ -72,8 +73,10 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-13">ModelEntity</a></span></div>
-<div class="block">模型实体</div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-16">ModelEntity</a></span></div>
+<div class="block">模型实体
+ <p>
+     玩家模型暂时仅支持绑定与播放动画</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -82,7 +85,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>方法概要</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">所有方法</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">实例方法</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">抽象方法</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">所有方法</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">实例方法</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">抽象方法</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">已过时的方法</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">修饰符和类型</div>
@@ -189,40 +192,58 @@ loadScripts(document, 'script');</script>
 <div class="block">让所有玩家客户端渲设置的实体模型</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(ltd.icecold.orangeengine.api.data.model.ModelData)" class="member-name-link">setModel</a><wbr>(<a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(java.lang.String,ltd.icecold.orangeengine.api.data.model.ModelType)" class="member-name-link">setModel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+ <a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">让所有玩家客户端渲染设置的实体模型</div>
+<div class="block">让所有玩家客户端渲设置的实体模型</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setModel(ltd.icecold.orangeengine.api.data.model.ModelData)" class="member-name-link">setModel</a><wbr>(<a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">已过时。</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">仅让某个玩家客户端渲染绑定已设置的实体模型</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player,java.lang.String)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player,ltd.icecold.orangeengine.api.data.model.ModelData)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player,
- <a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player,java.lang.String)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVisible(boolean)" class="member-name-link">setVisible</a><wbr>(boolean&nbsp;visible)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModel(org.bukkit.entity.Player,java.lang.String,ltd.icecold.orangeengine.api.data.model.ModelType)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+ <a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">让所有玩家客户端渲设置的实体模型</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#setModel(org.bukkit.entity.Player,ltd.icecold.orangeengine.api.data.model.ModelData)" class="member-name-link">setModel</a><wbr>(org.bukkit.entity.Player&nbsp;player,
+ <a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">已过时。</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setModelType(ltd.icecold.orangeengine.api.data.model.ModelType)" class="member-name-link">setModelType</a><wbr>(<a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">修改该实体模型类型，注意修改后并不会修改客户端状态！</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVisible(boolean)" class="member-name-link">setVisible</a><wbr>(boolean&nbsp;visible)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">实体是否可见</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unlockPitch(boolean)" class="member-name-link">unlockPitch</a><wbr>(boolean&nbsp;unlock)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unlockPitch(boolean)" class="member-name-link">unlockPitch</a><wbr>(boolean&nbsp;unlock)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">是否解除角度锁定</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unlockYaw(boolean)" class="member-name-link">unlockYaw</a><wbr>(boolean&nbsp;unlock)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unlockYaw(boolean)" class="member-name-link">unlockYaw</a><wbr>(boolean&nbsp;unlock)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">是否解除角度锁定</div>
 </div>
 </div>
@@ -242,7 +263,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setModel()">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-18">setModel</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-21">setModel</a></span>()</div>
 <div class="block">让所有玩家客户端渲染绑定已设置的实体模型</div>
 <dl class="notes">
 <dt>返回:</dt>
@@ -253,7 +274,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setModel(org.bukkit.entity.Player)">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-25">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-28">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player)</span></div>
 <div class="block">仅让某个玩家客户端渲染绑定已设置的实体模型</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -266,7 +287,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setModel(ltd.icecold.orangeengine.api.data.model.ModelData)">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-32">setModel</a></span><wbr><span class="parameters">(<a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="java.lang中的类或接口" class="external-link">@Deprecated</a>
+</span><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-35">setModel</a></span><wbr><span class="parameters">(<a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">已过时。</span></div>
 <div class="block">让所有玩家客户端渲染设置的实体模型</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -279,7 +302,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setModel(java.lang.String)">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-39">setModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-43">setModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">让所有玩家客户端渲设置的实体模型</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -290,9 +313,41 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setModel(java.lang.String,ltd.icecold.orangeengine.api.data.model.ModelType)">
+<h3>setModel</h3>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-50">setModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+ <a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</span></div>
+<div class="block">让所有玩家客户端渲设置的实体模型</div>
+<dl class="notes">
+<dt>参数:</dt>
+<dd><code>model</code> - 模型名</dd>
+<dd><code>type</code> - 模型类型</dd>
+<dt>返回:</dt>
+<dd>ModelEntity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setModel(org.bukkit.entity.Player,java.lang.String,ltd.icecold.orangeengine.api.data.model.ModelType)">
+<h3>setModel</h3>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-58">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+ <a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</span></div>
+<div class="block">让所有玩家客户端渲设置的实体模型</div>
+<dl class="notes">
+<dt>参数:</dt>
+<dd><code>player</code> - 指定玩家</dd>
+<dd><code>model</code> - 模型名</dd>
+<dd><code>type</code> - 模型类型</dd>
+<dt>返回:</dt>
+<dd>ModelEntity</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setModel(org.bukkit.entity.Player,java.lang.String)">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-48">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-67">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
 <dl class="notes">
@@ -313,8 +368,10 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setModel(org.bukkit.entity.Player,ltd.icecold.orangeengine.api.data.model.ModelData)">
 <h3>setModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-56">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="java.lang中的类或接口" class="external-link">@Deprecated</a>
+</span><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-75">setModel</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
  <a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a>&nbsp;modelData)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">已过时。</span></div>
 <div class="block">仅让某个玩家客户端渲染设置的实体模型</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -326,9 +383,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setModelType(ltd.icecold.orangeengine.api.data.model.ModelType)">
+<h3>setModelType</h3>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-83">setModelType</a></span><wbr><span class="parameters">(<a href="../data/model/ModelType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">ModelType</a>&nbsp;type)</span></div>
+<div class="block">修改该实体模型类型，注意修改后并不会修改客户端状态！</div>
+<dl class="notes">
+<dt>参数:</dt>
+<dd><code>type</code> - 模型类型</dd>
+<dt>返回:</dt>
+<dd>ModelEntity</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="playAnimation(java.lang.String)">
 <h3>playAnimation</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-65">playAnimation</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;animation)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-91">playAnimation</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;animation)</span></div>
 <div class="block">实体播放指定动作
  <p>
  插件无法判断模型是否存在该动作</div>
@@ -343,7 +413,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="playAnimation(org.bukkit.entity.Player,java.lang.String)">
 <h3>playAnimation</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-75">playAnimation</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-101">playAnimation</a></span><wbr><span class="parameters">(org.bukkit.entity.Player&nbsp;player,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;animation)</span></div>
 <div class="block">让指定玩家播放该实体播放指定动作
  <p>
@@ -360,7 +430,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addBoneExtraData(java.lang.String,ltd.icecold.orangeengine.api.data.bone.ExtraBoneData)">
 <h3>addBoneExtraData</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-86">addBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-112">addBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName,
  <a href="../data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.data.bone中的类">ExtraBoneData</a>&nbsp;data)</span></div>
 <div class="block">动态修改骨骼数据
  <p>
@@ -383,7 +453,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="removeBoneExtraData(java.lang.String)">
 <h3>removeBoneExtraData</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-93">removeBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-119">removeBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</span></div>
 <div class="block">移除已有的骨骼附加数据</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -396,7 +466,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setDefaultState(ltd.icecold.orangeengine.api.data.model.AnimationType,java.lang.String)">
 <h3>setDefaultState</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-101">setDefaultState</a></span><wbr><span class="parameters">(<a href="../data/model/AnimationType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">AnimationType</a>&nbsp;type,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-127">setDefaultState</a></span><wbr><span class="parameters">(<a href="../data/model/AnimationType.html" title="enum class in ltd.icecold.orangeengine.api.data.model">AnimationType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;animation)</span></div>
 <div class="block">替换默认动画，所有客户端均会立即生效</div>
 <dl class="notes">
@@ -411,7 +481,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setVisible(boolean)">
 <h3>setVisible</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-110">setVisible</a></span><wbr><span class="parameters">(boolean&nbsp;visible)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-136">setVisible</a></span><wbr><span class="parameters">(boolean&nbsp;visible)</span></div>
 <div class="block">实体是否可见
  <p>
  使用<code>LivingEntity.setInvisible(boolean)</code>同样生效</div>
@@ -426,7 +496,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="overwriteBoundingBox(boolean)">
 <h3>overwriteBoundingBox</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-117">overwriteBoundingBox</a></span><wbr><span class="parameters">(boolean&nbsp;overwrite)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-143">overwriteBoundingBox</a></span><wbr><span class="parameters">(boolean&nbsp;overwrite)</span></div>
 <div class="block">是否覆盖碰撞箱，默认使用配置文件设置的碰撞箱大小，默认true</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -439,7 +509,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setBoundingBox(double,double)">
 <h3>setBoundingBox</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-126">setBoundingBox</a></span><wbr><span class="parameters">(double&nbsp;width,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-152">setBoundingBox</a></span><wbr><span class="parameters">(double&nbsp;width,
  double&nbsp;height)</span></div>
 <div class="block">手动设置碰撞箱 设置后将覆盖配置文件碰撞箱大小
  <p>所有客户端对该实体均生效</div>
@@ -455,7 +525,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setLockYaw(float)">
 <h3>setLockYaw</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-133">setLockYaw</a></span><wbr><span class="parameters">(float&nbsp;yaw)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-159">setLockYaw</a></span><wbr><span class="parameters">(float&nbsp;yaw)</span></div>
 <div class="block">锁定模型视角</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -468,7 +538,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setLockPitch(float)">
 <h3>setLockPitch</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-139">setLockPitch</a></span><wbr><span class="parameters">(float&nbsp;pitch)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-165">setLockPitch</a></span><wbr><span class="parameters">(float&nbsp;pitch)</span></div>
 <div class="block">锁定模型视角</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -481,7 +551,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="unlockYaw(boolean)">
 <h3>unlockYaw</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-146">unlockYaw</a></span><wbr><span class="parameters">(boolean&nbsp;unlock)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-172">unlockYaw</a></span><wbr><span class="parameters">(boolean&nbsp;unlock)</span></div>
 <div class="block">是否解除角度锁定</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -494,7 +564,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="unlockPitch(boolean)">
 <h3>unlockPitch</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-153">unlockPitch</a></span><wbr><span class="parameters">(boolean&nbsp;unlock)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-179">unlockPitch</a></span><wbr><span class="parameters">(boolean&nbsp;unlock)</span></div>
 <div class="block">是否解除角度锁定</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -507,7 +577,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="boneColor(java.lang.String,int,int,int,int)">
 <h3>boneColor</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-165">boneColor</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;bone,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-191">boneColor</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;bone,
  int&nbsp;red,
  int&nbsp;green,
  int&nbsp;blue,
@@ -529,7 +599,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="addSubModel(java.lang.String,java.lang.String)">
 <h3>addSubModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-173">addSubModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-199">addSubModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;bonePart)</span></div>
 <div class="block">添加其他模型的骨骼到目前模型上</div>
 <dl class="notes">
@@ -544,7 +614,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="removeSubModel(java.lang.String,java.lang.String)">
 <h3>removeSubModel</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-181">removeSubModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-207">removeSubModel</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;bonePart)</span></div>
 <div class="block">移除添加的其他模型的骨骼</div>
 <dl class="notes">
@@ -559,7 +629,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="inactive(java.lang.String)">
 <h3>inactive</h3>
-<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-190">inactive</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
+<div class="member-signature"><span class="return-type"><a href="ModelEntity.html" title="ltd.icecold.orangeengine.api.model中的接口">ModelEntity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-216">inactive</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;model)</span></div>
 <div class="block">客户端将只渲染体一个固定的模型在当前位置
  <p>
  <strong>设置前请设置取消实体AI，否则会造成客户端看不到的透明实体对其他实体进行攻击等活动</strong></div>
@@ -574,7 +644,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getBoneExtraData(java.lang.String)">
 <h3>getBoneExtraData</h3>
-<div class="member-signature"><span class="return-type"><a href="../data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.data.bone中的类">ExtraBoneData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-198">getBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</span></div>
+<div class="member-signature"><span class="return-type"><a href="../data/bone/ExtraBoneData.html" title="ltd.icecold.orangeengine.api.data.bone中的类">ExtraBoneData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-224">getBoneExtraData</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang中的类或接口" class="external-link">String</a>&nbsp;boneName)</span></div>
 <div class="block">获取指定骨骼的附加数据</div>
 <dl class="notes">
 <dt>参数:</dt>
@@ -593,7 +663,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getEntityUUID()">
 <h3>getEntityUUID</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-204">getEntityUUID</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="java.util中的类或接口" class="external-link">UUID</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-230">getEntityUUID</a></span>()</div>
 <div class="block">获取ModelEntity绑定的实体UUID</div>
 <dl class="notes">
 <dt>返回:</dt>
@@ -604,7 +674,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getModelData()">
 <h3>getModelData</h3>
-<div class="member-signature"><span class="return-type"><a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-210">getModelData</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../data/model/ModelData.html" title="ltd.icecold.orangeengine.api.data.model中的类">ModelData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/ltd/icecold/orangeengine/api/model/ModelEntity.html#line-236">getModelData</a></span>()</div>
 <div class="block">获取绑定的模型</div>
 <dl class="notes">
 <dt>返回:</dt>

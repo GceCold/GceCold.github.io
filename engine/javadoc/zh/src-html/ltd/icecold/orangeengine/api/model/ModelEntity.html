@@ -16,213 +16,239 @@
 <span class="source-line-no">003</span><span id="line-3">import ltd.icecold.orangeengine.api.data.bone.ExtraBoneData;</span>
 <span class="source-line-no">004</span><span id="line-4">import ltd.icecold.orangeengine.api.data.model.AnimationType;</span>
 <span class="source-line-no">005</span><span id="line-5">import ltd.icecold.orangeengine.api.data.model.ModelData;</span>
-<span class="source-line-no">006</span><span id="line-6">import org.bukkit.entity.Player;</span>
-<span class="source-line-no">007</span><span id="line-7"></span>
-<span class="source-line-no">008</span><span id="line-8">import java.util.UUID;</span>
-<span class="source-line-no">009</span><span id="line-9"></span>
-<span class="source-line-no">010</span><span id="line-10">/**</span>
-<span class="source-line-no">011</span><span id="line-11"> * 模型实体</span>
-<span class="source-line-no">012</span><span id="line-12"> */</span>
-<span class="source-line-no">013</span><span id="line-13">public interface ModelEntity {</span>
-<span class="source-line-no">014</span><span id="line-14">    /**</span>
-<span class="source-line-no">015</span><span id="line-15">     * 让所有玩家客户端渲染绑定已设置的实体模型</span>
-<span class="source-line-no">016</span><span id="line-16">     * @return ModelEntity</span>
-<span class="source-line-no">017</span><span id="line-17">     */</span>
-<span class="source-line-no">018</span><span id="line-18">    ModelEntity setModel();</span>
-<span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">    /**</span>
-<span class="source-line-no">021</span><span id="line-21">     * 仅让某个玩家客户端渲染绑定已设置的实体模型</span>
-<span class="source-line-no">022</span><span id="line-22">     * @param player 看到该模型的玩家</span>
-<span class="source-line-no">023</span><span id="line-23">     * @return ModelEntity</span>
-<span class="source-line-no">024</span><span id="line-24">     */</span>
-<span class="source-line-no">025</span><span id="line-25">    ModelEntity setModel(Player player);</span>
-<span class="source-line-no">026</span><span id="line-26"></span>
-<span class="source-line-no">027</span><span id="line-27">    /**</span>
-<span class="source-line-no">028</span><span id="line-28">     * 让所有玩家客户端渲染设置的实体模型</span>
-<span class="source-line-no">029</span><span id="line-29">     * @param modelData 模型数据</span>
-<span class="source-line-no">030</span><span id="line-30">     * @return ModelEntity</span>
-<span class="source-line-no">031</span><span id="line-31">     */</span>
-<span class="source-line-no">032</span><span id="line-32">    ModelEntity setModel(ModelData modelData);</span>
-<span class="source-line-no">033</span><span id="line-33"></span>
-<span class="source-line-no">034</span><span id="line-34">    /**</span>
-<span class="source-line-no">035</span><span id="line-35">     * 让所有玩家客户端渲设置的实体模型</span>
-<span class="source-line-no">036</span><span id="line-36">     * @param model 模型名</span>
-<span class="source-line-no">037</span><span id="line-37">     * @return ModelEntity</span>
-<span class="source-line-no">038</span><span id="line-38">     */</span>
-<span class="source-line-no">039</span><span id="line-39">    ModelEntity setModel(String model);</span>
-<span class="source-line-no">040</span><span id="line-40"></span>
-<span class="source-line-no">041</span><span id="line-41">    /**</span>
-<span class="source-line-no">042</span><span id="line-42">     * 仅让某个玩家客户端渲染设置的实体模型</span>
-<span class="source-line-no">043</span><span id="line-43">     * @param player 指定玩家</span>
-<span class="source-line-no">044</span><span id="line-44">     * @param model 模型名</span>
-<span class="source-line-no">045</span><span id="line-45">     * @return ModelEntity</span>
-<span class="source-line-no">046</span><span id="line-46">     * @see ModelEntity#setModel(Player, ModelData)</span>
-<span class="source-line-no">047</span><span id="line-47">     */</span>
-<span class="source-line-no">048</span><span id="line-48">    ModelEntity setModel(Player player,String model);</span>
-<span class="source-line-no">049</span><span id="line-49"></span>
-<span class="source-line-no">050</span><span id="line-50">    /**</span>
-<span class="source-line-no">051</span><span id="line-51">     * 仅让某个玩家客户端渲染设置的实体模型</span>
-<span class="source-line-no">052</span><span id="line-52">     * @param player 指定玩家</span>
-<span class="source-line-no">053</span><span id="line-53">     * @param modelData 模型数据</span>
-<span class="source-line-no">054</span><span id="line-54">     * @return ModelEntity</span>
-<span class="source-line-no">055</span><span id="line-55">     */</span>
-<span class="source-line-no">056</span><span id="line-56">    ModelEntity setModel(Player player,ModelData modelData);</span>
-<span class="source-line-no">057</span><span id="line-57"></span>
-<span class="source-line-no">058</span><span id="line-58">    /**</span>
-<span class="source-line-no">059</span><span id="line-59">     * 实体播放指定动作</span>
-<span class="source-line-no">060</span><span id="line-60">     * &lt;p&gt;</span>
-<span class="source-line-no">061</span><span id="line-61">     * 插件无法判断模型是否存在该动作</span>
-<span class="source-line-no">062</span><span id="line-62">     * @param animation 动作名</span>
-<span class="source-line-no">063</span><span id="line-63">     * @return ModelEntity</span>
-<span class="source-line-no">064</span><span id="line-64">     */</span>
-<span class="source-line-no">065</span><span id="line-65">    ModelEntity playAnimation(String animation);</span>
-<span class="source-line-no">066</span><span id="line-66"></span>
-<span class="source-line-no">067</span><span id="line-67">    /**</span>
-<span class="source-line-no">068</span><span id="line-68">     * 让指定玩家播放该实体播放指定动作</span>
-<span class="source-line-no">069</span><span id="line-69">     * &lt;p&gt;</span>
-<span class="source-line-no">070</span><span id="line-70">     * 插件无法判断模型是否存在该动作</span>
+<span class="source-line-no">006</span><span id="line-6">import ltd.icecold.orangeengine.api.data.model.ModelType;</span>
+<span class="source-line-no">007</span><span id="line-7">import org.bukkit.entity.Player;</span>
+<span class="source-line-no">008</span><span id="line-8"></span>
+<span class="source-line-no">009</span><span id="line-9">import java.util.UUID;</span>
+<span class="source-line-no">010</span><span id="line-10"></span>
+<span class="source-line-no">011</span><span id="line-11">/**</span>
+<span class="source-line-no">012</span><span id="line-12"> * 模型实体</span>
+<span class="source-line-no">013</span><span id="line-13"> * &lt;p&gt;</span>
+<span class="source-line-no">014</span><span id="line-14"> *     玩家模型暂时仅支持绑定与播放动画</span>
+<span class="source-line-no">015</span><span id="line-15"> */</span>
+<span class="source-line-no">016</span><span id="line-16">public interface ModelEntity {</span>
+<span class="source-line-no">017</span><span id="line-17">    /**</span>
+<span class="source-line-no">018</span><span id="line-18">     * 让所有玩家客户端渲染绑定已设置的实体模型</span>
+<span class="source-line-no">019</span><span id="line-19">     * @return ModelEntity</span>
+<span class="source-line-no">020</span><span id="line-20">     */</span>
+<span class="source-line-no">021</span><span id="line-21">    ModelEntity setModel();</span>
+<span class="source-line-no">022</span><span id="line-22"></span>
+<span class="source-line-no">023</span><span id="line-23">    /**</span>
+<span class="source-line-no">024</span><span id="line-24">     * 仅让某个玩家客户端渲染绑定已设置的实体模型</span>
+<span class="source-line-no">025</span><span id="line-25">     * @param player 看到该模型的玩家</span>
+<span class="source-line-no">026</span><span id="line-26">     * @return ModelEntity</span>
+<span class="source-line-no">027</span><span id="line-27">     */</span>
+<span class="source-line-no">028</span><span id="line-28">    ModelEntity setModel(Player player);</span>
+<span class="source-line-no">029</span><span id="line-29"></span>
+<span class="source-line-no">030</span><span id="line-30">    /**</span>
+<span class="source-line-no">031</span><span id="line-31">     * 让所有玩家客户端渲染设置的实体模型</span>
+<span class="source-line-no">032</span><span id="line-32">     * @param modelData 模型数据</span>
+<span class="source-line-no">033</span><span id="line-33">     * @return ModelEntity</span>
+<span class="source-line-no">034</span><span id="line-34">     */</span>
+<span class="source-line-no">035</span><span id="line-35">    @Deprecated</span>
+<span class="source-line-no">036</span><span id="line-36">    ModelEntity setModel(ModelData modelData);</span>
+<span class="source-line-no">037</span><span id="line-37"></span>
+<span class="source-line-no">038</span><span id="line-38">    /**</span>
+<span class="source-line-no">039</span><span id="line-39">     * 让所有玩家客户端渲设置的实体模型</span>
+<span class="source-line-no">040</span><span id="line-40">     * @param model 模型名</span>
+<span class="source-line-no">041</span><span id="line-41">     * @return ModelEntity</span>
+<span class="source-line-no">042</span><span id="line-42">     */</span>
+<span class="source-line-no">043</span><span id="line-43">    ModelEntity setModel(String model);</span>
+<span class="source-line-no">044</span><span id="line-44">    /**</span>
+<span class="source-line-no">045</span><span id="line-45">     * 让所有玩家客户端渲设置的实体模型</span>
+<span class="source-line-no">046</span><span id="line-46">     * @param model 模型名</span>
+<span class="source-line-no">047</span><span id="line-47">     * @param type 模型类型</span>
+<span class="source-line-no">048</span><span id="line-48">     * @return ModelEntity</span>
+<span class="source-line-no">049</span><span id="line-49">     */</span>
+<span class="source-line-no">050</span><span id="line-50">    ModelEntity setModel(String model, ModelType type);</span>
+<span class="source-line-no">051</span><span id="line-51">    /**</span>
+<span class="source-line-no">052</span><span id="line-52">     * 让所有玩家客户端渲设置的实体模型</span>
+<span class="source-line-no">053</span><span id="line-53">     * @param player 指定玩家</span>
+<span class="source-line-no">054</span><span id="line-54">     * @param model 模型名</span>
+<span class="source-line-no">055</span><span id="line-55">     * @param type 模型类型</span>
+<span class="source-line-no">056</span><span id="line-56">     * @return ModelEntity</span>
+<span class="source-line-no">057</span><span id="line-57">     */</span>
+<span class="source-line-no">058</span><span id="line-58">    ModelEntity setModel(Player player, String model, ModelType type);</span>
+<span class="source-line-no">059</span><span id="line-59"></span>
+<span class="source-line-no">060</span><span id="line-60">    /**</span>
+<span class="source-line-no">061</span><span id="line-61">     * 仅让某个玩家客户端渲染设置的实体模型</span>
+<span class="source-line-no">062</span><span id="line-62">     * @param player 指定玩家</span>
+<span class="source-line-no">063</span><span id="line-63">     * @param model 模型名</span>
+<span class="source-line-no">064</span><span id="line-64">     * @return ModelEntity</span>
+<span class="source-line-no">065</span><span id="line-65">     * @see ModelEntity#setModel(Player, ModelData)</span>
+<span class="source-line-no">066</span><span id="line-66">     */</span>
+<span class="source-line-no">067</span><span id="line-67">    ModelEntity setModel(Player player,String model);</span>
+<span class="source-line-no">068</span><span id="line-68"></span>
+<span class="source-line-no">069</span><span id="line-69">    /**</span>
+<span class="source-line-no">070</span><span id="line-70">     * 仅让某个玩家客户端渲染设置的实体模型</span>
 <span class="source-line-no">071</span><span id="line-71">     * @param player 指定玩家</span>
-<span class="source-line-no">072</span><span id="line-72">     * @param animation 动作名</span>
+<span class="source-line-no">072</span><span id="line-72">     * @param modelData 模型数据</span>
 <span class="source-line-no">073</span><span id="line-73">     * @return ModelEntity</span>
 <span class="source-line-no">074</span><span id="line-74">     */</span>
-<span class="source-line-no">075</span><span id="line-75">    ModelEntity playAnimation(Player player,String animation);</span>
-<span class="source-line-no">076</span><span id="line-76"></span>
-<span class="source-line-no">077</span><span id="line-77">    /**</span>
-<span class="source-line-no">078</span><span id="line-78">     * 动态修改骨骼数据</span>
-<span class="source-line-no">079</span><span id="line-79">     * &lt;p&gt;</span>
-<span class="source-line-no">080</span><span id="line-80">     * 直接修改会导致该骨骼已有附加数据丢失，请先使用{@link ModelEntity#getBoneExtraData}获取已有数据再进行修改</span>
-<span class="source-line-no">081</span><span id="line-81">     * @param boneName 骨骼名</span>
-<span class="source-line-no">082</span><span id="line-82">     * @param data 附加数据</span>
-<span class="source-line-no">083</span><span id="line-83">     * @return ModelEntity</span>
-<span class="source-line-no">084</span><span id="line-84">     * @see ModelEntity#getBoneExtraData</span>
-<span class="source-line-no">085</span><span id="line-85">     */</span>
-<span class="source-line-no">086</span><span id="line-86">    ModelEntity addBoneExtraData(String boneName,ExtraBoneData data);</span>
-<span class="source-line-no">087</span><span id="line-87"></span>
-<span class="source-line-no">088</span><span id="line-88">    /**</span>
-<span class="source-line-no">089</span><span id="line-89">     * 移除已有的骨骼附加数据</span>
-<span class="source-line-no">090</span><span id="line-90">     * @param boneName 骨骼名</span>
-<span class="source-line-no">091</span><span id="line-91">     * @return ModelEntity</span>
-<span class="source-line-no">092</span><span id="line-92">     */</span>
-<span class="source-line-no">093</span><span id="line-93">    ModelEntity removeBoneExtraData(String boneName);</span>
-<span class="source-line-no">094</span><span id="line-94"></span>
-<span class="source-line-no">095</span><span id="line-95">    /**</span>
-<span class="source-line-no">096</span><span id="line-96">     * 替换默认动画，所有客户端均会立即生效</span>
-<span class="source-line-no">097</span><span id="line-97">     * @param type 动画类型</span>
-<span class="source-line-no">098</span><span id="line-98">     * @param animation 动画名</span>
+<span class="source-line-no">075</span><span id="line-75">    @Deprecated</span>
+<span class="source-line-no">076</span><span id="line-76">    ModelEntity setModel(Player player,ModelData modelData);</span>
+<span class="source-line-no">077</span><span id="line-77"></span>
+<span class="source-line-no">078</span><span id="line-78">    /**</span>
+<span class="source-line-no">079</span><span id="line-79">     * 修改该实体模型类型，注意修改后并不会修改客户端状态！</span>
+<span class="source-line-no">080</span><span id="line-80">     * @param type 模型类型</span>
+<span class="source-line-no">081</span><span id="line-81">     * @return ModelEntity</span>
+<span class="source-line-no">082</span><span id="line-82">     */</span>
+<span class="source-line-no">083</span><span id="line-83">    ModelEntity setModelType(ModelType type);</span>
+<span class="source-line-no">084</span><span id="line-84">    /**</span>
+<span class="source-line-no">085</span><span id="line-85">     * 实体播放指定动作</span>
+<span class="source-line-no">086</span><span id="line-86">     * &lt;p&gt;</span>
+<span class="source-line-no">087</span><span id="line-87">     * 插件无法判断模型是否存在该动作</span>
+<span class="source-line-no">088</span><span id="line-88">     * @param animation 动作名</span>
+<span class="source-line-no">089</span><span id="line-89">     * @return ModelEntity</span>
+<span class="source-line-no">090</span><span id="line-90">     */</span>
+<span class="source-line-no">091</span><span id="line-91">    ModelEntity playAnimation(String animation);</span>
+<span class="source-line-no">092</span><span id="line-92"></span>
+<span class="source-line-no">093</span><span id="line-93">    /**</span>
+<span class="source-line-no">094</span><span id="line-94">     * 让指定玩家播放该实体播放指定动作</span>
+<span class="source-line-no">095</span><span id="line-95">     * &lt;p&gt;</span>
+<span class="source-line-no">096</span><span id="line-96">     * 插件无法判断模型是否存在该动作</span>
+<span class="source-line-no">097</span><span id="line-97">     * @param player 指定玩家</span>
+<span class="source-line-no">098</span><span id="line-98">     * @param animation 动作名</span>
 <span class="source-line-no">099</span><span id="line-99">     * @return ModelEntity</span>
 <span class="source-line-no">100</span><span id="line-100">     */</span>
-<span class="source-line-no">101</span><span id="line-101">    ModelEntity setDefaultState(AnimationType type, String animation);</span>
+<span class="source-line-no">101</span><span id="line-101">    ModelEntity playAnimation(Player player,String animation);</span>
 <span class="source-line-no">102</span><span id="line-102"></span>
 <span class="source-line-no">103</span><span id="line-103">    /**</span>
-<span class="source-line-no">104</span><span id="line-104">     * 实体是否可见</span>
+<span class="source-line-no">104</span><span id="line-104">     * 动态修改骨骼数据</span>
 <span class="source-line-no">105</span><span id="line-105">     * &lt;p&gt;</span>
-<span class="source-line-no">106</span><span id="line-106">     * 使用{@link org.bukkit.entity.LivingEntity#setInvisible}同样生效</span>
-<span class="source-line-no">107</span><span id="line-107">     * @param visible 是否可见</span>
-<span class="source-line-no">108</span><span id="line-108">     * @return ModelEntity</span>
-<span class="source-line-no">109</span><span id="line-109">     */</span>
-<span class="source-line-no">110</span><span id="line-110">    ModelEntity setVisible(boolean visible);</span>
-<span class="source-line-no">111</span><span id="line-111"></span>
-<span class="source-line-no">112</span><span id="line-112">    /**</span>
-<span class="source-line-no">113</span><span id="line-113">     * 是否覆盖碰撞箱，默认使用配置文件设置的碰撞箱大小，默认true</span>
-<span class="source-line-no">114</span><span id="line-114">     * @param overwrite 覆盖</span>
-<span class="source-line-no">115</span><span id="line-115">     * @return ModelEntity</span>
-<span class="source-line-no">116</span><span id="line-116">     */</span>
-<span class="source-line-no">117</span><span id="line-117">    ModelEntity overwriteBoundingBox(boolean overwrite);</span>
-<span class="source-line-no">118</span><span id="line-118"></span>
-<span class="source-line-no">119</span><span id="line-119">    /**</span>
-<span class="source-line-no">120</span><span id="line-120">     * 手动设置碰撞箱 设置后将覆盖配置文件碰撞箱大小</span>
-<span class="source-line-no">121</span><span id="line-121">     * &lt;p&gt;所有客户端对该实体均生效</span>
-<span class="source-line-no">122</span><span id="line-122">     * @param width 碰撞箱宽度</span>
-<span class="source-line-no">123</span><span id="line-123">     * @param height 碰撞箱高度</span>
-<span class="source-line-no">124</span><span id="line-124">     * @return ModelEntity</span>
-<span class="source-line-no">125</span><span id="line-125">     */</span>
-<span class="source-line-no">126</span><span id="line-126">    ModelEntity setBoundingBox(double width, double height);</span>
-<span class="source-line-no">127</span><span id="line-127"></span>
-<span class="source-line-no">128</span><span id="line-128">    /**</span>
-<span class="source-line-no">129</span><span id="line-129">     * 锁定模型视角</span>
-<span class="source-line-no">130</span><span id="line-130">     * @param yaw</span>
-<span class="source-line-no">131</span><span id="line-131">     * @return ModelEntity</span>
-<span class="source-line-no">132</span><span id="line-132">     */</span>
-<span class="source-line-no">133</span><span id="line-133">    ModelEntity setLockYaw(float yaw);</span>
-<span class="source-line-no">134</span><span id="line-134">    /**</span>
-<span class="source-line-no">135</span><span id="line-135">     * 锁定模型视角</span>
-<span class="source-line-no">136</span><span id="line-136">     * @param pitch</span>
-<span class="source-line-no">137</span><span id="line-137">     * @return ModelEntity</span>
-<span class="source-line-no">138</span><span id="line-138">     */</span>
-<span class="source-line-no">139</span><span id="line-139">    ModelEntity setLockPitch(float pitch);</span>
-<span class="source-line-no">140</span><span id="line-140"></span>
-<span class="source-line-no">141</span><span id="line-141">    /**</span>
-<span class="source-line-no">142</span><span id="line-142">     * 是否解除角度锁定</span>
-<span class="source-line-no">143</span><span id="line-143">     * @param unlock</span>
-<span class="source-line-no">144</span><span id="line-144">     * @return ModelEntity</span>
-<span class="source-line-no">145</span><span id="line-145">     */</span>
-<span class="source-line-no">146</span><span id="line-146">    ModelEntity unlockYaw(boolean unlock);</span>
-<span class="source-line-no">147</span><span id="line-147"></span>
-<span class="source-line-no">148</span><span id="line-148">    /**</span>
-<span class="source-line-no">149</span><span id="line-149">     * 是否解除角度锁定</span>
-<span class="source-line-no">150</span><span id="line-150">     * @param unlock</span>
-<span class="source-line-no">151</span><span id="line-151">     * @return ModelEntity</span>
-<span class="source-line-no">152</span><span id="line-152">     */</span>
-<span class="source-line-no">153</span><span id="line-153">    ModelEntity unlockPitch(boolean unlock);</span>
-<span class="source-line-no">154</span><span id="line-154"></span>
-<span class="source-line-no">155</span><span id="line-155">    /**</span>
-<span class="source-line-no">156</span><span id="line-156">     * 动态修改骨骼贴图颜色</span>
-<span class="source-line-no">157</span><span id="line-157">     * &lt;p&gt;所有客户端对该实体均生效</span>
-<span class="source-line-no">158</span><span id="line-158">     * @param bone 骨骼名</span>
-<span class="source-line-no">159</span><span id="line-159">     * @param red red</span>
-<span class="source-line-no">160</span><span id="line-160">     * @param green green</span>
-<span class="source-line-no">161</span><span id="line-161">     * @param blue blue</span>
-<span class="source-line-no">162</span><span id="line-162">     * @param alpha alpha</span>
+<span class="source-line-no">106</span><span id="line-106">     * 直接修改会导致该骨骼已有附加数据丢失，请先使用{@link ModelEntity#getBoneExtraData}获取已有数据再进行修改</span>
+<span class="source-line-no">107</span><span id="line-107">     * @param boneName 骨骼名</span>
+<span class="source-line-no">108</span><span id="line-108">     * @param data 附加数据</span>
+<span class="source-line-no">109</span><span id="line-109">     * @return ModelEntity</span>
+<span class="source-line-no">110</span><span id="line-110">     * @see ModelEntity#getBoneExtraData</span>
+<span class="source-line-no">111</span><span id="line-111">     */</span>
+<span class="source-line-no">112</span><span id="line-112">    ModelEntity addBoneExtraData(String boneName,ExtraBoneData data);</span>
+<span class="source-line-no">113</span><span id="line-113"></span>
+<span class="source-line-no">114</span><span id="line-114">    /**</span>
+<span class="source-line-no">115</span><span id="line-115">     * 移除已有的骨骼附加数据</span>
+<span class="source-line-no">116</span><span id="line-116">     * @param boneName 骨骼名</span>
+<span class="source-line-no">117</span><span id="line-117">     * @return ModelEntity</span>
+<span class="source-line-no">118</span><span id="line-118">     */</span>
+<span class="source-line-no">119</span><span id="line-119">    ModelEntity removeBoneExtraData(String boneName);</span>
+<span class="source-line-no">120</span><span id="line-120"></span>
+<span class="source-line-no">121</span><span id="line-121">    /**</span>
+<span class="source-line-no">122</span><span id="line-122">     * 替换默认动画，所有客户端均会立即生效</span>
+<span class="source-line-no">123</span><span id="line-123">     * @param type 动画类型</span>
+<span class="source-line-no">124</span><span id="line-124">     * @param animation 动画名</span>
+<span class="source-line-no">125</span><span id="line-125">     * @return ModelEntity</span>
+<span class="source-line-no">126</span><span id="line-126">     */</span>
+<span class="source-line-no">127</span><span id="line-127">    ModelEntity setDefaultState(AnimationType type, String animation);</span>
+<span class="source-line-no">128</span><span id="line-128"></span>
+<span class="source-line-no">129</span><span id="line-129">    /**</span>
+<span class="source-line-no">130</span><span id="line-130">     * 实体是否可见</span>
+<span class="source-line-no">131</span><span id="line-131">     * &lt;p&gt;</span>
+<span class="source-line-no">132</span><span id="line-132">     * 使用{@link org.bukkit.entity.LivingEntity#setInvisible}同样生效</span>
+<span class="source-line-no">133</span><span id="line-133">     * @param visible 是否可见</span>
+<span class="source-line-no">134</span><span id="line-134">     * @return ModelEntity</span>
+<span class="source-line-no">135</span><span id="line-135">     */</span>
+<span class="source-line-no">136</span><span id="line-136">    ModelEntity setVisible(boolean visible);</span>
+<span class="source-line-no">137</span><span id="line-137"></span>
+<span class="source-line-no">138</span><span id="line-138">    /**</span>
+<span class="source-line-no">139</span><span id="line-139">     * 是否覆盖碰撞箱，默认使用配置文件设置的碰撞箱大小，默认true</span>
+<span class="source-line-no">140</span><span id="line-140">     * @param overwrite 覆盖</span>
+<span class="source-line-no">141</span><span id="line-141">     * @return ModelEntity</span>
+<span class="source-line-no">142</span><span id="line-142">     */</span>
+<span class="source-line-no">143</span><span id="line-143">    ModelEntity overwriteBoundingBox(boolean overwrite);</span>
+<span class="source-line-no">144</span><span id="line-144"></span>
+<span class="source-line-no">145</span><span id="line-145">    /**</span>
+<span class="source-line-no">146</span><span id="line-146">     * 手动设置碰撞箱 设置后将覆盖配置文件碰撞箱大小</span>
+<span class="source-line-no">147</span><span id="line-147">     * &lt;p&gt;所有客户端对该实体均生效</span>
+<span class="source-line-no">148</span><span id="line-148">     * @param width 碰撞箱宽度</span>
+<span class="source-line-no">149</span><span id="line-149">     * @param height 碰撞箱高度</span>
+<span class="source-line-no">150</span><span id="line-150">     * @return ModelEntity</span>
+<span class="source-line-no">151</span><span id="line-151">     */</span>
+<span class="source-line-no">152</span><span id="line-152">    ModelEntity setBoundingBox(double width, double height);</span>
+<span class="source-line-no">153</span><span id="line-153"></span>
+<span class="source-line-no">154</span><span id="line-154">    /**</span>
+<span class="source-line-no">155</span><span id="line-155">     * 锁定模型视角</span>
+<span class="source-line-no">156</span><span id="line-156">     * @param yaw</span>
+<span class="source-line-no">157</span><span id="line-157">     * @return ModelEntity</span>
+<span class="source-line-no">158</span><span id="line-158">     */</span>
+<span class="source-line-no">159</span><span id="line-159">    ModelEntity setLockYaw(float yaw);</span>
+<span class="source-line-no">160</span><span id="line-160">    /**</span>
+<span class="source-line-no">161</span><span id="line-161">     * 锁定模型视角</span>
+<span class="source-line-no">162</span><span id="line-162">     * @param pitch</span>
 <span class="source-line-no">163</span><span id="line-163">     * @return ModelEntity</span>
 <span class="source-line-no">164</span><span id="line-164">     */</span>
-<span class="source-line-no">165</span><span id="line-165">    ModelEntity boneColor(String bone, int red, int green, int blue, int alpha);</span>
+<span class="source-line-no">165</span><span id="line-165">    ModelEntity setLockPitch(float pitch);</span>
 <span class="source-line-no">166</span><span id="line-166"></span>
 <span class="source-line-no">167</span><span id="line-167">    /**</span>
-<span class="source-line-no">168</span><span id="line-168">     * 添加其他模型的骨骼到目前模型上</span>
-<span class="source-line-no">169</span><span id="line-169">     * @param model 模型名</span>
-<span class="source-line-no">170</span><span id="line-170">     * @param bonePart 骨骼名</span>
-<span class="source-line-no">171</span><span id="line-171">     * @return ModelEntity</span>
-<span class="source-line-no">172</span><span id="line-172">     */</span>
-<span class="source-line-no">173</span><span id="line-173">    ModelEntity addSubModel(String model,String bonePart);</span>
-<span class="source-line-no">174</span><span id="line-174"></span>
-<span class="source-line-no">175</span><span id="line-175">    /**</span>
-<span class="source-line-no">176</span><span id="line-176">     * 移除添加的其他模型的骨骼</span>
-<span class="source-line-no">177</span><span id="line-177">     * @param model 模型名</span>
-<span class="source-line-no">178</span><span id="line-178">     * @param bonePart 骨骼名</span>
-<span class="source-line-no">179</span><span id="line-179">     * @return ModelEntity</span>
-<span class="source-line-no">180</span><span id="line-180">     */</span>
-<span class="source-line-no">181</span><span id="line-181">    ModelEntity removeSubModel(String model,String bonePart);</span>
-<span class="source-line-no">182</span><span id="line-182"></span>
-<span class="source-line-no">183</span><span id="line-183">    /**</span>
-<span class="source-line-no">184</span><span id="line-184">     * 客户端将只渲染体一个固定的模型在当前位置</span>
-<span class="source-line-no">185</span><span id="line-185">     * &lt;p&gt;</span>
-<span class="source-line-no">186</span><span id="line-186">     * &lt;strong&gt;设置前请设置取消实体AI，否则会造成客户端看不到的透明实体对其他实体进行攻击等活动&lt;/strong&gt;</span>
-<span class="source-line-no">187</span><span id="line-187">     * @param model 模型名</span>
-<span class="source-line-no">188</span><span id="line-188">     * @return ModelEntity</span>
-<span class="source-line-no">189</span><span id="line-189">     */</span>
-<span class="source-line-no">190</span><span id="line-190">    ModelEntity inactive(String model);</span>
-<span class="source-line-no">191</span><span id="line-191"></span>
-<span class="source-line-no">192</span><span id="line-192">    /**</span>
-<span class="source-line-no">193</span><span id="line-193">     * 获取指定骨骼的附加数据</span>
-<span class="source-line-no">194</span><span id="line-194">     * @param boneName 骨骼名</span>
-<span class="source-line-no">195</span><span id="line-195">     * @return ModelEntity</span>
-<span class="source-line-no">196</span><span id="line-196">     * @see ModelEntity#addBoneExtraData</span>
-<span class="source-line-no">197</span><span id="line-197">     */</span>
-<span class="source-line-no">198</span><span id="line-198">    ExtraBoneData getBoneExtraData(String boneName);</span>
-<span class="source-line-no">199</span><span id="line-199"></span>
-<span class="source-line-no">200</span><span id="line-200">    /**</span>
-<span class="source-line-no">201</span><span id="line-201">     * 获取ModelEntity绑定的实体UUID</span>
-<span class="source-line-no">202</span><span id="line-202">     * @return 实体</span>
-<span class="source-line-no">203</span><span id="line-203">     */</span>
-<span class="source-line-no">204</span><span id="line-204">    UUID getEntityUUID();</span>
-<span class="source-line-no">205</span><span id="line-205"></span>
-<span class="source-line-no">206</span><span id="line-206">    /**</span>
-<span class="source-line-no">207</span><span id="line-207">     * 获取绑定的模型</span>
-<span class="source-line-no">208</span><span id="line-208">     * @return 模型</span>
-<span class="source-line-no">209</span><span id="line-209">     */</span>
-<span class="source-line-no">210</span><span id="line-210">    ModelData getModelData();</span>
-<span class="source-line-no">211</span><span id="line-211">}</span>
-<span class="source-line-no">212</span><span id="line-212"></span>
+<span class="source-line-no">168</span><span id="line-168">     * 是否解除角度锁定</span>
+<span class="source-line-no">169</span><span id="line-169">     * @param unlock</span>
+<span class="source-line-no">170</span><span id="line-170">     * @return ModelEntity</span>
+<span class="source-line-no">171</span><span id="line-171">     */</span>
+<span class="source-line-no">172</span><span id="line-172">    ModelEntity unlockYaw(boolean unlock);</span>
+<span class="source-line-no">173</span><span id="line-173"></span>
+<span class="source-line-no">174</span><span id="line-174">    /**</span>
+<span class="source-line-no">175</span><span id="line-175">     * 是否解除角度锁定</span>
+<span class="source-line-no">176</span><span id="line-176">     * @param unlock</span>
+<span class="source-line-no">177</span><span id="line-177">     * @return ModelEntity</span>
+<span class="source-line-no">178</span><span id="line-178">     */</span>
+<span class="source-line-no">179</span><span id="line-179">    ModelEntity unlockPitch(boolean unlock);</span>
+<span class="source-line-no">180</span><span id="line-180"></span>
+<span class="source-line-no">181</span><span id="line-181">    /**</span>
+<span class="source-line-no">182</span><span id="line-182">     * 动态修改骨骼贴图颜色</span>
+<span class="source-line-no">183</span><span id="line-183">     * &lt;p&gt;所有客户端对该实体均生效</span>
+<span class="source-line-no">184</span><span id="line-184">     * @param bone 骨骼名</span>
+<span class="source-line-no">185</span><span id="line-185">     * @param red red</span>
+<span class="source-line-no">186</span><span id="line-186">     * @param green green</span>
+<span class="source-line-no">187</span><span id="line-187">     * @param blue blue</span>
+<span class="source-line-no">188</span><span id="line-188">     * @param alpha alpha</span>
+<span class="source-line-no">189</span><span id="line-189">     * @return ModelEntity</span>
+<span class="source-line-no">190</span><span id="line-190">     */</span>
+<span class="source-line-no">191</span><span id="line-191">    ModelEntity boneColor(String bone, int red, int green, int blue, int alpha);</span>
+<span class="source-line-no">192</span><span id="line-192"></span>
+<span class="source-line-no">193</span><span id="line-193">    /**</span>
+<span class="source-line-no">194</span><span id="line-194">     * 添加其他模型的骨骼到目前模型上</span>
+<span class="source-line-no">195</span><span id="line-195">     * @param model 模型名</span>
+<span class="source-line-no">196</span><span id="line-196">     * @param bonePart 骨骼名</span>
+<span class="source-line-no">197</span><span id="line-197">     * @return ModelEntity</span>
+<span class="source-line-no">198</span><span id="line-198">     */</span>
+<span class="source-line-no">199</span><span id="line-199">    ModelEntity addSubModel(String model,String bonePart);</span>
+<span class="source-line-no">200</span><span id="line-200"></span>
+<span class="source-line-no">201</span><span id="line-201">    /**</span>
+<span class="source-line-no">202</span><span id="line-202">     * 移除添加的其他模型的骨骼</span>
+<span class="source-line-no">203</span><span id="line-203">     * @param model 模型名</span>
+<span class="source-line-no">204</span><span id="line-204">     * @param bonePart 骨骼名</span>
+<span class="source-line-no">205</span><span id="line-205">     * @return ModelEntity</span>
+<span class="source-line-no">206</span><span id="line-206">     */</span>
+<span class="source-line-no">207</span><span id="line-207">    ModelEntity removeSubModel(String model,String bonePart);</span>
+<span class="source-line-no">208</span><span id="line-208"></span>
+<span class="source-line-no">209</span><span id="line-209">    /**</span>
+<span class="source-line-no">210</span><span id="line-210">     * 客户端将只渲染体一个固定的模型在当前位置</span>
+<span class="source-line-no">211</span><span id="line-211">     * &lt;p&gt;</span>
+<span class="source-line-no">212</span><span id="line-212">     * &lt;strong&gt;设置前请设置取消实体AI，否则会造成客户端看不到的透明实体对其他实体进行攻击等活动&lt;/strong&gt;</span>
+<span class="source-line-no">213</span><span id="line-213">     * @param model 模型名</span>
+<span class="source-line-no">214</span><span id="line-214">     * @return ModelEntity</span>
+<span class="source-line-no">215</span><span id="line-215">     */</span>
+<span class="source-line-no">216</span><span id="line-216">    ModelEntity inactive(String model);</span>
+<span class="source-line-no">217</span><span id="line-217"></span>
+<span class="source-line-no">218</span><span id="line-218">    /**</span>
+<span class="source-line-no">219</span><span id="line-219">     * 获取指定骨骼的附加数据</span>
+<span class="source-line-no">220</span><span id="line-220">     * @param boneName 骨骼名</span>
+<span class="source-line-no">221</span><span id="line-221">     * @return ModelEntity</span>
+<span class="source-line-no">222</span><span id="line-222">     * @see ModelEntity#addBoneExtraData</span>
+<span class="source-line-no">223</span><span id="line-223">     */</span>
+<span class="source-line-no">224</span><span id="line-224">    ExtraBoneData getBoneExtraData(String boneName);</span>
+<span class="source-line-no">225</span><span id="line-225"></span>
+<span class="source-line-no">226</span><span id="line-226">    /**</span>
+<span class="source-line-no">227</span><span id="line-227">     * 获取ModelEntity绑定的实体UUID</span>
+<span class="source-line-no">228</span><span id="line-228">     * @return 实体</span>
+<span class="source-line-no">229</span><span id="line-229">     */</span>
+<span class="source-line-no">230</span><span id="line-230">    UUID getEntityUUID();</span>
+<span class="source-line-no">231</span><span id="line-231"></span>
+<span class="source-line-no">232</span><span id="line-232">    /**</span>
+<span class="source-line-no">233</span><span id="line-233">     * 获取绑定的模型</span>
+<span class="source-line-no">234</span><span id="line-234">     * @return 模型</span>
+<span class="source-line-no">235</span><span id="line-235">     */</span>
+<span class="source-line-no">236</span><span id="line-236">    ModelData getModelData();</span>
+<span class="source-line-no">237</span><span id="line-237">}</span>
+<span class="source-line-no">238</span><span id="line-238"></span>
 
 
 

@@ -12,21 +12,26 @@
 <main role="main">
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">package ltd.icecold.orangeengine.api.data.entity;</span>
-<span class="source-line-no">002</span><span id="line-2"></span>
+<span class="source-line-no">002</span><span id="line-2">import com.google.common.collect.Maps;</span>
 <span class="source-line-no">003</span><span id="line-3">import ltd.icecold.orangeengine.api.data.model.ModelBoundingBox;</span>
 <span class="source-line-no">004</span><span id="line-4"></span>
-<span class="source-line-no">005</span><span id="line-5">import java.util.Map;</span>
-<span class="source-line-no">006</span><span id="line-6"></span>
-<span class="source-line-no">007</span><span id="line-7">public class EntityExtraData {</span>
-<span class="source-line-no">008</span><span id="line-8">    public boolean visible = true;</span>
-<span class="source-line-no">009</span><span id="line-9">    public boolean overwriteHitBox = true;</span>
-<span class="source-line-no">010</span><span id="line-10">    public ModelBoundingBox boundingBox;</span>
-<span class="source-line-no">011</span><span id="line-11">    public boolean lockPitch = false;</span>
-<span class="source-line-no">012</span><span id="line-12">    public boolean lockYaw = false;</span>
-<span class="source-line-no">013</span><span id="line-13">    public float pitch = 99999f;</span>
-<span class="source-line-no">014</span><span id="line-14">    public float yaw = 99999f;</span>
-<span class="source-line-no">015</span><span id="line-15">    public Map&lt;String, String&gt; subModelBone;</span>
-<span class="source-line-no">016</span><span id="line-16">}</span>
+<span class="source-line-no">005</span><span id="line-5">import java.awt.*;</span>
+<span class="source-line-no">006</span><span id="line-6">import java.util.List;</span>
+<span class="source-line-no">007</span><span id="line-7">import java.util.Map;</span>
+<span class="source-line-no">008</span><span id="line-8">import java.util.Set;</span>
+<span class="source-line-no">009</span><span id="line-9"></span>
+<span class="source-line-no">010</span><span id="line-10">public class EntityExtraData {</span>
+<span class="source-line-no">011</span><span id="line-11">    public boolean visible = true;</span>
+<span class="source-line-no">012</span><span id="line-12">    public boolean overwriteHitBox = true;</span>
+<span class="source-line-no">013</span><span id="line-13">    public ModelBoundingBox boundingBox;</span>
+<span class="source-line-no">014</span><span id="line-14">    public boolean lockPitch = false;</span>
+<span class="source-line-no">015</span><span id="line-15">    public boolean lockYaw = false;</span>
+<span class="source-line-no">016</span><span id="line-16">    public float pitch = 99999f;</span>
+<span class="source-line-no">017</span><span id="line-17">    public float yaw = 99999f;</span>
+<span class="source-line-no">018</span><span id="line-18">    public Map&lt;String, Set&lt;String&gt;&gt; subModelBone = Maps.newHashMap();</span>
+<span class="source-line-no">019</span><span id="line-19"></span>
+<span class="source-line-no">020</span><span id="line-20">    public Map&lt;String, Color&gt; color = Maps.newHashMap();</span>
+<span class="source-line-no">021</span><span id="line-21">}</span>
 
 
 
