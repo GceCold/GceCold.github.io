@@ -1,0 +1,1 @@
+const e={key:"v-9b3bef64",path:"/guide/plugin/player/model.html",title:"\u6A21\u578B\u89C4\u5219",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u52A8\u4F5C\u547D\u540D\u89C4\u5219",slug:"\u52A8\u4F5C\u547D\u540D\u89C4\u5219",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"guide/plugin/player/model.md"};export{e as data};
